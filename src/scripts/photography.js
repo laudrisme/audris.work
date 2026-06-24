@@ -1,4 +1,6 @@
 import { photographySections, getPhotographyImages } from "../data/photography-sections.js";
+import { projectCopy } from "../data/project-copy.js";
+import { workIndex } from "../data/work-index.js";
 import { escapeHtml, loadProjects, renderChrome } from "./shared.js";
 
 renderChrome();
@@ -18,17 +20,20 @@ function imageMarkup(image, section, index, lead = false) {
 try {
   const projects = await loadProjects();
   const project = projects.find(item => item.project_slug === "photography-visual-storytelling");
+  const copy = projectCopy["photography-visual-storytelling"];
+  const indexProject = workIndex.find(item => item.id === "photography-visual-storytelling");
   if (!project) throw new Error("Photography metadata missing");
   intro.id = "top";
   intro.innerHTML = `
-    <p class="eyebrow">Photography archive / ${escapeHtml(project.year)}</p>
+    <p class="eyebrow">Photography archive / ${escapeHtml(indexProject.year)}</p>
     <div class="photography-intro__grid">
       <h1>${escapeHtml(project.project_title)}</h1>
       <p>${escapeHtml(project.one_line_summary)} Browse the five sequences below.</p>
     </div>`;
 
   sectionIndex.innerHTML = photographySections.map((section, index) => {
-    const first = getPhotographyImages(section)[0];
+    const sectionImages = getPhotographyImages(section);
+    const first = sectionImages.find(image => image.file === section.previewImage) || sectionImages[0];
     return `<a href="#${section.anchor}" class="photography-index-card">
       <img src="${first.src}" alt="Preview of ${escapeHtml(section.title)}" width="${first.width}" height="${first.height}" loading="${index < 2 ? "eager" : "lazy"}">
       <span><i>${String(index + 1).padStart(2, "0")}</i>${escapeHtml(section.title)}</span>
@@ -39,13 +44,24 @@ try {
     const images = getPhotographyImages(section);
     return `<section class="photo-section photo-section--${section.layout}" id="${section.anchor}">
       <header class="photo-section__title"><p>${section.id.slice(0, 2)}</p><h2>${escapeHtml(section.title)}</h2><a href="#top">Index ↑</a></header>
+      ${section.anchor === "overview" ? `<div class="photo-overview-copy">
+        <p class="photo-overview-copy__lead">${escapeHtml(copy.overview)}</p>
+        <dl>
+          <div><dt>Context</dt><dd>${escapeHtml(copy.context)}</dd></div>
+          <div><dt>My Role</dt><dd>${escapeHtml(copy.role)}</dd></div>
+          <div><dt>Approach</dt><dd>${escapeHtml(copy.approach)}</dd></div>
+          <div><dt>What it shows</dt><dd>${escapeHtml(copy.outcome)}</dd></div>
+          <div><dt>Selected visuals</dt><dd>${escapeHtml(copy.visuals)}</dd></div>
+        </dl>
+      </div>` : ""}
       <div class="photo-section__lead">${imageMarkup(images[0], section, 0, true)}</div>
       <div class="photo-works-grid">${images.slice(1).map((image, index) => imageMarkup(image, section, index)).join("")}</div>
     </section>`;
   }).join("");
 
   const scrollToHash = () => {
-    const anchor = decodeURIComponent(location.hash.replace(/^#/, ""));
+    const requestedAnchor = decodeURIComponent(location.hash.replace(/^#/, ""));
+    const anchor = ({ opening: "overview", closing: "star" })[requestedAnchor] || requestedAnchor;
     if (!anchor) return;
     document.getElementById(anchor)?.scrollIntoView({ block: "start" });
   };

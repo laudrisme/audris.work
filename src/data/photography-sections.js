@@ -1,10 +1,12 @@
 export const photographySections = [
   {
     id: "01-opening",
-    anchor: "opening",
-    title: "Opening",
+    anchor: "overview",
+    legacyAnchor: "opening",
+    title: "Overview",
     displayTitle: true,
     layout: "opening",
+    previewImage: "04.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
     dimensions: [[4399, 6598], [4374, 5468], [2107, 2809], [1739, 3091]]
   },
@@ -41,8 +43,9 @@ export const photographySections = [
   },
   {
     id: "05-closing",
-    anchor: "closing",
-    title: "Closing",
+    anchor: "star",
+    legacyAnchor: "closing",
+    title: "✩",
     displayTitle: true,
     layout: "closing",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
