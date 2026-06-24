@@ -39,16 +39,24 @@ assets/projects/cyta/product/
 assets/projects/cyta/sourcing/
 assets/projects/cyta/workshop/
 
-# The first build currently uses project covers, not these larger working galleries
-assets/projects/cyta/
+# The website uses only the ordered selected-visual sets from these larger working folders
+assets/projects/cyta/*
+!assets/projects/cyta/selected-visuals/
+!assets/projects/cyta/selected-visuals/**
 assets/projects/cross-border/
-assets/projects/cross-border-ecommerce/
+assets/projects/cross-border-ecommerce/*
+!assets/projects/cross-border-ecommerce/selected-visuals/
+!assets/projects/cross-border-ecommerce/selected-visuals/**
 assets/projects/ai-cx-research/*
 !assets/projects/ai-cx-research/ai-cx-cover-academic-poster-01.png
+!assets/projects/ai-cx-research/selected-visuals/
+!assets/projects/ai-cx-research/selected-visuals/**
 assets/projects/marketing-retail/*
 !assets/projects/marketing-retail/web-ready-spreads/
 assets/projects/marketing-retail/web-ready-spreads/*
 !assets/projects/marketing-retail/web-ready-spreads/marketing-retail-icicle-spread-04.png
+!assets/projects/marketing-retail/selected-visuals/
+!assets/projects/marketing-retail/selected-visuals/**
 
 # Research source PDFs are working documents; the web poster image remains tracked
 assets/projects/research/

@@ -193,6 +193,53 @@ button { color: inherit; font: inherit; }
 .case-study__number { margin: 0; color: var(--muted); font-size: 11px; }
 .case-study__section h2 { margin: 0; font-family: var(--serif); font-size: 42px; font-weight: 400; }
 .case-study__section > p:last-child { max-width: 480px; margin: 5px 0 0; }
+.project-selected-visuals { margin-top: 130px; padding-top: 34px; border-top: 1px solid var(--line); }
+.project-selected-visuals__header { display: grid; grid-template-columns: 60px 1fr 1fr; gap: 30px; margin-bottom: clamp(55px, 8vw, 110px); }
+.project-selected-visuals__header h2 { margin: 0; font-family: var(--serif); font-size: 42px; font-weight: 400; }
+.project-selected-visuals__header > p:last-child { max-width: 480px; margin: 5px 0 0; }
+.project-selected-visuals__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(28px, 4vw, 64px); align-items: start; }
+.project-selected-visual { grid-column: span 6; margin: 0 0 clamp(45px, 8vw, 110px); }
+.project-selected-visual--wide { grid-column: 1 / -1; }
+.project-selected-visual__frame { display: flex; justify-content: center; align-items: center; min-width: 0; background: var(--soft); }
+.project-selected-visual img { display: block; width: 100%; max-width: 100%; height: auto; max-height: 88vh; object-fit: contain; }
+.project-selected-visual figcaption { max-width: 620px; margin-top: 10px; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.project-selected-visuals__empty { margin: 0; padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); }
+.project-selected-visuals--cross-border-ecommerce-operations [data-visual-order="1"] .project-selected-visual__frame { background: transparent; }
+.project-selected-visuals--cross-border-ecommerce-operations [data-visual-order="1"] img { width: auto; max-width: 100%; height: auto; max-height: 88vh; }
+.project-downloads { margin-top: 30px; padding-top: 34px; border-top: 1px solid var(--line); }
+.project-downloads__header { display: grid; grid-template-columns: 60px 1fr 1fr; gap: 30px; margin-bottom: 45px; }
+.project-downloads__header h2 { margin: 0; font-family: var(--serif); font-size: 42px; font-weight: 400; }
+.project-downloads__header > p:last-child { max-width: 480px; margin: 5px 0 0; }
+.project-downloads__list { border-top: 1px solid var(--line); }
+.project-downloads__list a { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.project-downloads__list a:hover span, .project-downloads__list a:focus-visible span { text-decoration: underline; text-underline-offset: 4px; }
+.project-downloads__list span { font-family: var(--serif); font-size: 22px; }
+.project-downloads__list small { color: var(--muted); font-size: 10px; font-weight: 400; }
+
+/* Fashion Styling uses a project-specific editorial sequence. */
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="1"] { grid-column: 1 / 7; }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="2"] { grid-column: 7 / 13; }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="1"] .project-selected-visual__frame,
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="2"] .project-selected-visual__frame {
+  height: min(70vh, 640px);
+  align-items: flex-start;
+}
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="1"] img,
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="2"] img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="3"] { grid-column: 4 / 13; margin-top: clamp(30px, 5vw, 80px); }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="4"] { grid-column: 1 / 10; margin-top: clamp(70px, 10vw, 150px); }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="5"] { grid-column: 4 / 10; margin-top: clamp(40px, 7vw, 100px); }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="6"] { grid-column: 1 / 8; }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="7"] { grid-column: 9 / 13; align-self: center; }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="6"] .project-selected-visual__frame { height: min(76vh, 680px); }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="7"] .project-selected-visual__frame { height: min(38vh, 340px); }
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="6"] img,
+.project-selected-visuals--fashion-styling-visual-direction [data-visual-order="7"] img { width: 100%; height: 100%; object-fit: contain; }
 
 .photography-page { background: #f7f6f1; }
 .photography-intro { padding-bottom: 130px; }
@@ -253,6 +300,37 @@ button { color: inherit; font: inherit; }
   .project-cover { width: 100%; }
   .case-study__section { grid-template-columns: 35px 1fr; }
   .case-study__section > p:last-child { grid-column: 2; }
+  .project-selected-visuals { margin-top: 80px; }
+  .project-selected-visuals__header { grid-template-columns: 35px 1fr; gap: 18px; }
+  .project-selected-visuals__header > p:last-child { grid-column: 2; }
+  .project-selected-visual { grid-column: 1 / -1; }
+  .project-downloads__header { grid-template-columns: 35px 1fr; gap: 18px; }
+  .project-downloads__header > p:last-child { grid-column: 2; }
+  .project-downloads__list a { grid-template-columns: 1fr; gap: 5px; }
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="1"],
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="2"],
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="3"],
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="4"],
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="5"],
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="6"],
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="7"] {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    align-self: auto;
+  }
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="1"] .project-selected-visual__frame,
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="2"] .project-selected-visual__frame,
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="6"] .project-selected-visual__frame,
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="7"] .project-selected-visual__frame {
+    height: auto;
+  }
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="1"] img,
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="2"] img,
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="6"] img,
+  .project-selected-visuals--fashion-styling-visual-direction [data-visual-order="7"] img {
+    width: 100%;
+    height: auto;
+  }
   .photo-section__title { margin-bottom: 60px; }
   .photo--large, .photo--wide { grid-column: 1 / 13; }
   .photo--pair-a, .photo--small-left { grid-column: 1 / 8; }
@@ -495,7 +573,17 @@ button { color: inherit; font: inherit; }
 }
 #overview .photo-works-grid > .photo:nth-child(1) { grid-column: 1 / 7; }
 #overview .photo-works-grid > .photo:nth-child(2) { grid-column: 7 / 13; margin-top: 0 !important; }
-#fashion-styling .photo-works-grid > .photo:nth-child(2) { grid-column: 6 / 13; height: min(74vh, 680px); }
+.photo-works-grid--fashion-styling { column-gap: clamp(18px, 3.5vw, 58px); row-gap: clamp(85px, 12vw, 180px); }
+.photo-works-grid--fashion-styling .photo { margin: 0; }
+.photo-works-grid--fashion-styling > .photo:nth-child(1),
+.photo-works-grid--fashion-styling > .photo:nth-child(2) { height: min(72vh, 680px); margin-top: 0 !important; }
+.photo-works-grid--fashion-styling > .photo:nth-child(1) { grid-column: 1 / 7; }
+.photo-works-grid--fashion-styling > .photo:nth-child(2) { grid-column: 7 / 13; }
+.photo-works-grid--fashion-styling > .photo:nth-child(3) { grid-column: 4 / 13; height: min(90vh, 820px); margin-top: 0 !important; justify-content: flex-end; }
+.photo-works-grid--fashion-styling > .photo:nth-child(4) { grid-column: 1 / 10; height: min(90vh, 820px); margin-top: 0 !important; justify-content: flex-start; }
+.photo-works-grid--fashion-styling > .photo:nth-child(5) { grid-column: 3 / 11; height: min(78vh, 700px); margin-top: 0 !important; }
+.photo-works-grid--fashion-styling > .photo:nth-child(6) { grid-column: 1 / 9; height: min(84vh, 760px); margin-top: 0 !important; }
+.photo-works-grid--fashion-styling > .photo:nth-child(7) { grid-column: 9 / 13; height: min(42vh, 380px); margin-top: 0 !important; align-self: center; }
 .photo-works-grid img { width: 100%; max-width: 100%; height: 100%; max-height: none; object-fit: contain; }
 .photo-overview-copy { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(40px, 8vw, 120px); margin: 0 0 90px; padding-top: 26px; border-top: 1px solid var(--line); }
 .photo-overview-copy__lead { margin: 0; font-family: var(--serif); font-size: clamp(24px, 3vw, 38px); line-height: 1.08; }
@@ -564,7 +652,14 @@ button { color: inherit; font: inherit; }
     height: min(68vh, 580px);
     margin-top: 0 !important;
   }
-  #fashion-styling .photo-works-grid > .photo:nth-child(2) { grid-column: 4 / 13; height: min(66vh, 560px); }
+  .photo-works-grid--fashion-styling { row-gap: 70px; }
+  .photo-works-grid--fashion-styling > .photo:nth-child(1),
+  .photo-works-grid--fashion-styling > .photo:nth-child(2) { height: min(55vh, 420px); }
+  .photo-works-grid--fashion-styling > .photo:nth-child(3) { grid-column: 3 / 13; height: min(72vh, 600px); }
+  .photo-works-grid--fashion-styling > .photo:nth-child(4) { grid-column: 1 / 11; height: min(72vh, 600px); }
+  .photo-works-grid--fashion-styling > .photo:nth-child(5) { grid-column: 2 / 12; height: min(62vh, 520px); }
+  .photo-works-grid--fashion-styling > .photo:nth-child(6) { grid-column: 1 / 9; height: min(64vh, 540px); }
+  .photo-works-grid--fashion-styling > .photo:nth-child(7) { grid-column: 9 / 13; height: min(32vh, 270px); }
   .photo-section__lead .photo { height: min(72vh, 600px); }
   .photo-works-grid .photo { height: min(62vh, 520px); }
   .photo-overview-copy { grid-template-columns: 1fr; gap: 35px; margin-bottom: 60px; }

@@ -17,6 +17,16 @@ function imageMarkup(image, section, index, lead = false) {
   </figure>`;
 }
 
+function sectionVisualsMarkup(section, images) {
+  if (section.anchor === "fashion-styling") {
+    return `<div class="photo-works-grid photo-works-grid--fashion-styling">
+      ${images.map((image, index) => imageMarkup(image, section, index)).join("")}
+    </div>`;
+  }
+  return `<div class="photo-section__lead">${imageMarkup(images[0], section, 0, true)}</div>
+    <div class="photo-works-grid">${images.slice(1).map((image, index) => imageMarkup(image, section, index)).join("")}</div>`;
+}
+
 try {
   const projects = await loadProjects();
   const project = projects.find(item => item.project_slug === "photography-visual-storytelling");
@@ -54,8 +64,7 @@ try {
           <div><dt>Selected visuals</dt><dd>${escapeHtml(copy.visuals)}</dd></div>
         </dl>
       </div>` : ""}
-      <div class="photo-section__lead">${imageMarkup(images[0], section, 0, true)}</div>
-      <div class="photo-works-grid">${images.slice(1).map((image, index) => imageMarkup(image, section, index)).join("")}</div>
+      ${sectionVisualsMarkup(section, images)}
     </section>`;
   }).join("");
 
