@@ -128,19 +128,6 @@ export const workIndex = [
     keywords: ["photography", "closing", "star", "place", "sequence", "visual essay"],
     image: "assets/projects/photography/curated-sections/05-closing/01.jpg",
     featured: false
-  },
-  {
-    id: "fashion-styling-visual-direction",
-    title: "Fashion Styling / Visual Direction",
-    type: "project",
-    category: "Styling",
-    subcategory: "Editorial / Image-making",
-    year: "/",
-    route: "project.html?slug=fashion-styling-visual-direction",
-    anchor: "",
-    keywords: ["styling", "fashion", "visual direction", "editorial", "portrait", "still life"],
-    image: "assets/project-covers/fashion-styling-cover-revolution-01.jpg",
-    featured: false
   }
 ];
 
