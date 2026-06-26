@@ -8,7 +8,7 @@ export const projectVisuals = {
       { src: "assets/projects/cyta/selected-visuals/05-cyta-workshop-detail.jpg", alt: "Incense tube and tassel shown during a Cyta workshop", caption: "A workshop detail showing the relationship between material, object and presentation." },
       { src: "assets/projects/cyta/selected-visuals/06-cyta-incense-materials.jpg", alt: "Incense materials arranged for a Cyta workshop", caption: "Raw incense materials used to make the process more visible and approachable." },
       { src: "assets/projects/cyta/selected-visuals/07-cyta-sourcing-visit.jpg", alt: "Display shelves photographed during a Cyta sourcing visit", caption: "Sourcing research focused on product display, material cues and retail context." },
-      { src: "assets/projects/cyta/selected-visuals/08-cyta-retail-visit.jpg", alt: "Interior photographed during a Cyta retail research visit", caption: "Retail observation informing how a calm physical environment can support the brand." }
+      { src: "assets/projects/cyta/selected-visuals/08-cyta-retail-visit.jpg", alt: "Interior photographed during a Cyta retail research visit", caption: "Retail space under construction during the build-out stage." }
     ]
   },
   "cross-border-ecommerce-operations": {
@@ -30,17 +30,16 @@ export const projectVisuals = {
   },
   "marketing-retail-projects": {
     selectedVisuals: [
-      { src: "assets/projects/marketing-retail/selected-visuals/01-marketing-retail-store-concept.jpg", alt: "Minimal retail interior used as a marketing and retail project cover", caption: "Retail atmosphere reference framing the project’s quiet spatial direction." },
-      { src: "assets/projects/marketing-retail/selected-visuals/02-marketing-retail-visualisation-spread.png", alt: "ICICLE proposal spread showing the visualisation concept", caption: "Proposal visualisation connecting brand material and customer engagement." },
-      { src: "assets/projects/marketing-retail/selected-visuals/03-marketing-retail-digital-concept-spread.png", alt: "ICICLE proposal spread showing a digital retail concept", caption: "Digital concept exploring a more participatory route into sustainability information." },
-      { src: "assets/projects/marketing-retail/selected-visuals/04-marketing-retail-research-spread.png", alt: "ICICLE research spread about decoding greenwashing", caption: "Research spread translating consumer concerns into a clearer retail proposition." },
-      { src: "assets/projects/marketing-retail/selected-visuals/05-marketing-retail-report-spread.png", alt: "ICICLE business report cover spread", caption: "Business proposal spread positioning the project within ICICLE’s brand context." },
-      { src: "assets/projects/marketing-retail/selected-visuals/06-marketing-retail-illustrated-report.png", alt: "Illustrated report cover about gamification and sustainable fashion", caption: "Illustrated report presenting the project’s gamification research question." }
+      { src: "assets/projects/marketing-retail/selected-visuals/01-marketing-retail-visualisation.jpeg", alt: "Marketing and retail visualisation collage", caption: "" },
+      { src: "assets/projects/marketing-retail/selected-visuals/02-Illustrated Report Content Collage.jpg", alt: "Illustrated report content collage for marketing and retail project", caption: "" },
+      { src: "assets/projects/marketing-retail/selected-visuals/03-marketing-retail-creative-outcome-visualisation-collage.jpeg", alt: "Creative outcome visualisation collage for marketing and retail project", caption: "" },
+      { src: "assets/projects/marketing-retail/selected-visuals/04-ICICLE-Business-Report-Collage.jpg", alt: "ICICLE business report collage", caption: "" },
+      { src: "assets/projects/marketing-retail/selected-visuals/05-JimmyChoo-Retail-Creative.JPEG", alt: "Jimmy Choo retail creative collage", caption: "" }
     ],
     downloads: [
-      { title: "ICICLE Business Proposal", href: "assets/archive/source-documents/marketing-retail-icicle-proposal-01.pdf", filename: "audris-li-icicle-business-proposal.pdf", meta: "PDF · 36 MB" },
+      { title: "Bachelor Final Major Project — Illustrated Report", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-illustrated-report-01.pdf", filename: "audris-li-fmp-illustrated-report.pdf", meta: "PDF · 45 MB" },
       { title: "Bachelor Final Major Project — Creative Outcome", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-creative-outcome-01.pdf", filename: "audris-li-fmp-creative-outcome.pdf", meta: "PDF · 57 MB" },
-      { title: "Bachelor Final Major Project — Illustrated Report", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-illustrated-report-01.pdf", filename: "audris-li-fmp-illustrated-report.pdf", meta: "PDF · 45 MB" }
+      { title: "ICICLE Business Proposal", href: "assets/archive/source-documents/marketing-retail-icicle-proposal-01.pdf", filename: "audris-li-icicle-business-proposal.pdf", meta: "PDF · 36 MB" }
     ]
   },
   "fashion-styling-visual-direction": {
