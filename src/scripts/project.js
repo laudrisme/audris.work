@@ -1,5 +1,5 @@
 import { projectCopy } from "../data/project-copy.js?v=20260627-layout-notes";
-import { projectVisuals } from "../data/project-visuals.js?v=20260627-layout-notes";
+import { projectVisuals } from "../data/project-visuals.js?v=20260627-small-fixes";
 import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260627-cv-label";
 
 renderChrome();

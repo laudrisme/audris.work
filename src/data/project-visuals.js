@@ -24,7 +24,7 @@ export const projectVisuals = {
   "cross-border-ecommerce-operations": {
     selectedVisuals: [
       { src: "assets/projects/cross-border-ecommerce/selected-visuals/01-ecommerce-digital-printing.jpg", alt: "Digital textile printing machine in operation", caption: "Digital printing observed as part of the product and supplier workflow." },
-      { src: "assets/projects/cross-border-ecommerce/selected-visuals/02-ecommerce-production-machinery.jpg", alt: "Rows of production machinery inside a supplier facility", caption: "Production capacity and machinery reviewed during supplier coordination." },
+      { src: "assets/projects/cross-border-ecommerce/selected-visuals/02-ecommerce-production-machinery.jpg", alt: "Production machinery reviewed during cross-border supplier coordination.", caption: "Production capacity and machinery reviewed during supplier coordination." },
       { src: "assets/projects/cross-border-ecommerce/selected-visuals/03-ecommerce-customise-process.jpg", alt: "Apparel customisation artwork displayed in garment design software", caption: "Customisation artwork reviewed during product development." }
     ]
   },

@@ -1,4 +1,4 @@
-import { initArchiveIndex } from "./archive-index.js?v=20260627-zine";
+import { initArchiveIndex } from "./archive-index.js?v=20260627-small-fixes";
 
 initArchiveIndex(document.querySelector("[data-home-archive]"), {
   title: "audris-portfolio-index.xls"

@@ -23,6 +23,11 @@ function sectionVisualsMarkup(section, images) {
       ${images.map((image, index) => imageMarkup(image, section, index)).join("")}
     </div>`;
   }
+  if (section.anchor === "star") {
+    return `<div class="photo-works-grid photo-works-grid--star">
+      ${images.map((image, index) => imageMarkup(image, section, index)).join("")}
+    </div>`;
+  }
   return `<div class="photo-section__lead">${imageMarkup(images[0], section, 0, true)}</div>
     <div class="photo-works-grid">${images.slice(1).map((image, index) => imageMarkup(image, section, index)).join("")}</div>`;
 }

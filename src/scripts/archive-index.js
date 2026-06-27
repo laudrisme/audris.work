@@ -1,4 +1,4 @@
-import { workFilters, workEntryHref, workIndex } from "../data/work-index.js?v=20260627-zine";
+import { workFilters, workEntryHref, workIndex } from "../data/work-index.js?v=20260627-small-fixes";
 import { escapeHtml } from "./shared.js";
 
 function matchesFilter(entry, filter) {
