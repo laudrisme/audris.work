@@ -1,14 +1,24 @@
 export const projectVisuals = {
   "cyta-sustainable-incense-brand": {
     selectedVisuals: [
-      { src: "assets/projects/cyta/selected-visuals/01-cyta-packaging-editorial.png", alt: "Cyta incense packaging arranged with lace-inspired textile details", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/02-cyta-product-cold-grey.jpg", alt: "Cyta incense tube photographed against a cool grey background", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/03-cyta-product-warm-light.jpg", alt: "Cyta incense tube photographed in warm light", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/04-cyta-lace-logo.png", alt: "White lace-inspired Cyta logo on a pale blue background", caption: "Lace-inspired identity detail developed around softness, heritage and craft." },
-      { src: "assets/projects/cyta/selected-visuals/05-cyta-workshop-detail.jpg", alt: "Incense tube and tassel shown during a Cyta workshop", caption: "A workshop detail showing the relationship between material, object and presentation." },
-      { src: "assets/projects/cyta/selected-visuals/06-cyta-incense-materials.jpg", alt: "Incense materials arranged for a Cyta workshop", caption: "Raw incense materials used to make the process more visible and approachable." },
-      { src: "assets/projects/cyta/selected-visuals/07-cyta-sourcing-visit.jpg", alt: "Display shelves photographed during a Cyta sourcing visit", caption: "Sourcing research focused on product display, material cues and retail context." },
-      { src: "assets/projects/cyta/selected-visuals/08-cyta-retail-visit.jpg", alt: "Interior photographed during a Cyta retail research visit", caption: "Retail space under construction during the build-out stage." }
+      { src: "assets/projects/cyta/selected-visuals/01-cyta-product-cold-grey.jpg", alt: "Black Cyta incense tube with a red tassel photographed on a cool grey surface", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/02-cyta-lace-logo.png", alt: "Transparent lace-inspired Cyta identity with stars, wings and the kite character", caption: "", transparent: true },
+      { src: "assets/projects/cyta/selected-visuals/03-cyta-packaging-editorial.png", alt: "Cyta incense packaging presented within a pale lace-patterned editorial composition", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/04-cyta-studio-workshop.jpeg", alt: "Incense tubes and a ceramic burner arranged in the Cyta studio", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/05.jpeg", alt: "Close view of a black Cyta incense tube and red tassel on a wooden surface", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/06-cyta-incense-materials-01.JPG", alt: "Jar of jasmine buds shown with a traditional Chinese materia medica reference", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/07-cyta-incense-materials-02.jpeg", alt: "Hand selecting labelled incense materials during formulation research", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/08-cyta-incense materials-03.JPG", alt: "Dried citrus ingredients arranged in a ceramic vessel for incense formulation", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/09-cyta-sourcing-visit.jpg", alt: "Material and product research during a Cyta sourcing visit", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/10-cyta-retail-visit.jpg", alt: "Retail space under construction during the build-out stage", caption: "" }
+    ],
+    visualGroups: [
+      { sectionIndex: 0, layout: "cyta-overview", visualIndexes: [0] },
+      { sectionIndex: 1, layout: "cyta-identity-stack", visualIndexes: [1, 2] },
+      { sectionIndex: 2, layout: "cyta-breathing-space", visualIndexes: [3] },
+      { sectionIndex: 3, layout: "cyta-approach-stack", visualIndexes: [4, 5] },
+      { sectionIndex: 4, layout: "cyta-evidence-pair", visualIndexes: [6, 7] },
+      { sectionIndex: 5, layout: "cyta-context-stack", visualIndexes: [8, 9] }
     ]
   },
   "cross-border-ecommerce-operations": {
@@ -33,8 +43,13 @@ export const projectVisuals = {
       { src: "assets/projects/marketing-retail/selected-visuals/01-marketing-retail-visualisation.jpeg", alt: "Marketing and retail visualisation collage", caption: "" },
       { src: "assets/projects/marketing-retail/selected-visuals/02-Illustrated Report Content Collage.jpg", alt: "Illustrated report content collage for marketing and retail project", caption: "" },
       { src: "assets/projects/marketing-retail/selected-visuals/03-marketing-retail-creative-outcome-visualisation-collage.jpeg", alt: "Creative outcome visualisation collage for marketing and retail project", caption: "" },
-      { src: "assets/projects/marketing-retail/selected-visuals/04-ICICLE-Business-Report-Collage.jpg", alt: "ICICLE business report collage", caption: "" },
-      { src: "assets/projects/marketing-retail/selected-visuals/05-JimmyChoo-Retail-Creative.JPEG", alt: "Jimmy Choo retail creative collage", caption: "" }
+      { src: "assets/projects/marketing-retail/selected-visuals/04-JimmyChoo-Retail-Creative.JPEG", alt: "Jimmy Choo retail creative collage", caption: "" },
+      { src: "assets/projects/marketing-retail/selected-visuals/05-ICICLE-Business-Report-Collage.jpg", alt: "ICICLE business report collage", caption: "" }
+    ],
+    visualGroups: [
+      { sectionIndex: 0, layout: "marketing-opener", visualIndexes: [0] },
+      { sectionIndex: 3, layout: "marketing-collage-spreads", visualIndexes: [1, 2, 3] },
+      { sectionIndex: 4, layout: "marketing-context", visualIndexes: [4] }
     ],
     downloads: [
       { title: "Bachelor Final Major Project — Illustrated Report", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-illustrated-report-01.pdf", filename: "audris-li-fmp-illustrated-report.pdf", meta: "PDF · 45 MB" },

@@ -1,47 +1,48 @@
 export const projectCopy = {
   "cyta-sustainable-incense-brand": {
-    overview: "Cyta is a sustainable lifestyle brand I founded to reintroduce traditional Chinese incense culture through a contemporary, design-led lens. Inspired by the Chinese character 鳶, meaning ‘kite,’ the brand reflects the elevation of the mind and spirit through small, intentional rituals of calm.",
-    context: "Incense has long held an important place in Chinese culture, valued for its aromatic, medicinal, and spiritual qualities. Yet many contemporary incense products either lose that cultural grounding or present it in a way that feels inaccessible to younger audiences.",
+    overview: "Cyta is a sustainable incense brand I founded to bring traditional Chinese incense culture into a more contemporary, design-led context.",
+    context: "The project translates incense-making into a more approachable, trustworthy, and relevant product experience while preserving the depth of its rituals and material logic.",
     role: "Founder and brand lead",
-    approach: "Cyta was shaped around four key ideas: cultural heritage, mental well-being, sustainability, and community. Drawing on my family’s knowledge of Traditional Chinese Medicine, I explored how incense recipes and medicinal ingredients influence scent, atmosphere, and emotional experience — reframing incense as a ritual shaped by material, memory, and care.",
+    approach: "Cyta was developed around four core ideas: cultural heritage, mental well-being, sustainability, and community.",
     outcome: "Cyta evolved from a personal idea into a customer-facing lifestyle brand with a clear identity and a small but meaningful community around it.",
-    visuals: "Include the logo, packaging and product photography, production details, events, selected customer feedback, excerpts from the brand deck, and social content.",
-    visualHeading: "Visual Evidence",
+    visuals: "",
     sections: [
       {
         heading: "Overview",
         body: [
-          "Cyta is a sustainable lifestyle brand I founded to reintroduce traditional Chinese incense culture through a contemporary, design-led lens. Inspired by the Chinese character 鳶, meaning ‘kite,’ the brand reflects the elevation of the mind and spirit through small, intentional rituals of calm.",
+          "Cyta is a sustainable incense brand I founded to bring traditional Chinese incense culture into a more contemporary, design-led context. Inspired by the character 鳶 (kite), the brand explores calm, ritual, and emotional care through product, packaging, and atmosphere.",
           "The project emerged from my family’s background in Traditional Chinese Medicine, my interest in mindful living, and my own experience of stress and sleep difficulties as a student. Through Cyta, I wanted to explore how product design, storytelling, and customer experience could make an ancient practice feel relevant, approachable, and emotionally resonant for a new generation."
         ]
       },
       {
-        heading: "The Challenge",
-        body: [
-          "Incense has long held an important place in Chinese culture, valued for its aromatic, medicinal, and spiritual qualities. Yet many contemporary incense products either lose that cultural grounding or present it in a way that feels inaccessible to younger audiences.",
-          "There was also a clear product-quality challenge. Many affordable incense products rely on lower-grade raw materials, while higher-quality options are often expensive and difficult to source consistently. For a new brand, this raised an important question: how could I create an incense product that felt culturally respectful, materially trustworthy, and still approachable?",
-          "At the same time, conversations around stress, anxiety, and sleep have become increasingly visible among students and young professionals. I saw an opportunity to build a contemporary lifestyle brand that connects traditional incense-making with modern wellbeing, without reducing it to a generic wellness trend."
-        ]
-      },
-      {
-        heading: "My Approach",
-        body: [
-          "Cyta was shaped around four key ideas: cultural heritage, mental well-being, sustainability, and community. Drawing on my family’s knowledge of Traditional Chinese Medicine, I explored how incense recipes and medicinal ingredients influence scent, atmosphere, and emotional experience — reframing incense as a ritual shaped by material, memory, and care.",
-          "With support from my family, I sourced more reliable ingredients and herbs, allowing me to prioritise quality, formulation, and sourcing in the development process. I created three incense blends for everyday needs — cleansing, calming, and resting — and developed the brand identity, packaging, photography, and digital communication to create a quiet, contemporary, and culturally grounded experience."
-        ]
-      },
-      {
         heading: "Brand Identity and Visual Language",
+        alignment: "right",
         body: [
           "The visual identity was designed to convey a sense of calm before the product is even used. The lace logo became central to Cyta’s language, chosen for its balance of intimacy and distance — delicate and close to the body, yet light, airy, and almost disappearing. Its softness and intricate making process reflect the brand’s values: slow, quiet, private, and resistant to the pace of modern visual culture.",
           "In a world shaped by efficiency and constant consumption, that softness felt quietly luxurious. The lace texture also captured the experience I wanted Cyta to create: breathable, tactile, intimate, and gently suspended."
         ]
       },
       {
+        heading: "The Challenge",
+        body: [
+          "While incense has long held significance in Chinese culture for its aromatic, medicinal, and spiritual roles, many modern products either flatten it into fragrance alone, overlooking the material and cultural logic that defines traditional incense-making, or present it in ways that feel inaccessible to younger users. Choosing incense can be challenging without clear guidance. Subtle differences in material quality, proportion, and pairing can create distinctly different sensory experiences and intended effects.",
+          "At the same time, the category faces a clear quality divide: affordable options often rely on lower-grade materials, while higher-end incense can be inconsistent or difficult to source.",
+          "This project responds to that gap by translating incense-making into a more approachable, trustworthy, and relevant product experience. Rather than framing incense as a generic wellness trend, Cyta aims to preserve the depth of its rituals and material logic while making it easier to understand and use in everyday life."
+        ]
+      },
+      {
+        heading: "My Approach",
+        body: [
+          "Cyta was developed around four core ideas: cultural heritage, mental well-being, sustainability, and community. Drawing on my family’s knowledge of Traditional Chinese Medicine, I explored how incense recipes and medicinal ingredients shape scent, atmosphere, and emotional experience, reframing incense as a ritual grounded in material, memory, and care.",
+          "With my family’s support, I sourced more reliable herbs and materials, allowing me to prioritise quality, formulation, and trust in the product development process. I developed three everyday blends — cleansing, calming, and resting — and created the brand identity, packaging, photography, and digital communication to present Cyta as a quiet, contemporary, culturally grounded brand.",
+          "Sustainability was built into both the product and the customer journey. Cyta uses carefully sourced ingredients, recyclable packaging, refillable containers, and refill vouchers to encourage keeping, reusing, and returning rather than quick disposal."
+        ]
+      },
+      {
         heading: "Retail and Community Channels",
         body: [
-          "Rather than relying on paid advertising, Cyta grew through curated physical spaces and word of mouth. I introduced the brand through Pilates studios, yoga studios, meditation spaces, therapy consult rooms, and wellness clinics — environments where customers encountered the incense naturally before engaging with the product.",
-          "The brand also developed through private Instagram and WeChat communities, extending the relationship beyond the first purchase, and creating space to share knowledge around incense, wellbeing, and traditional culture. Cyta later expanded into workshops and Traditional Chinese six-element consultations, offering a more personalised way to explore scent, material, and lifestyle fit.",
+          "Rather than relying on paid advertising, Cyta grew through curated physical spaces and word of mouth. I introduced the brand through Pilates studios, yoga studios, meditation spaces, therapy consult rooms, and other wellness-oriented spaces — environments where customers encountered the incense naturally before engaging with the product.",
+          "The brand also developed through private Instagram and WeChat communities, extending the relationship beyond the first purchase and creating space to share knowledge about incense, well-being, and traditional culture. Cyta later expanded into workshops and Traditional Chinese six-element consultations, offering a more personalised way to explore scent, material, and lifestyle fit.",
           {
             listTitle: "Channels",
             items: [
@@ -58,23 +59,12 @@ export const projectCopy = {
         ]
       },
       {
-        heading: "Sustainability",
-        body: [
-          "Sustainability shaped both the product and the customer journey.",
-          "Cyta combines ethically sourced ingredients with packaging designed to minimise waste, drawing on the form of traditional Chinese book tubes while using recyclable materials and refillable containers. Refill vouchers encourage customers to continue using the same object over time.",
-          "For me, sustainability was also about slowing the relationship between product and user — encouraging keeping, refilling, reusing, and returning."
-        ]
-      },
-      {
-        heading: "What Sets It Apart",
-        body: "Cyta combines cultural knowledge, thoughtful sourcing, and community-led discovery to create a contemporary ritual rooted in Traditional Chinese Medicine. The brand grew through atmosphere, trust, and word of mouth, with many people encountering the product through a space before ever being introduced to it."
-      },
-      {
         heading: "What It Led To",
+        alignment: "left",
         body: [
           "Cyta evolved from a personal idea into a customer-facing lifestyle brand with a clear identity and a small but meaningful community around it.",
-          "Building the brand gave me hands-on experience across the full lifecycle of a product: from identifying an opportunity and developing the product, to shaping the brand identity, testing communication, creating content, building retail relationships, and responding to customer feedback.",
-          "It also reinforced for me that branding is not only visual. Every touchpoint — from the scent and packaging to conversations, workshops, social media, and the refill system — contributes to how people experience, understand, and remember a brand."
+          "Building the brand gave me hands-on experience across the full product lifecycle: identifying opportunities, developing the product, shaping the visual identity, testing communications, creating content, building retail relationships, and responding to customer feedback.",
+          "It also taught me that branding is not only visual. Every touchpoint — scent, packaging, photography, workshops, conversations, social media, and the refill system — contributes to how people experience and understand a brand."
         ]
       },
       {
@@ -84,13 +74,14 @@ export const projectCopy = {
             "Brand positioning and storytelling",
             "Product and packaging development",
             "Customer communication and community building",
+            "Retail partnership development",
             "Visual content and art direction",
             "E-commerce and digital engagement"
           ]
         }
       }
     ],
-    skills: ["Brand positioning and storytelling", "Product and packaging development", "Customer communication and community building", "Visual content and art direction", "E-commerce and digital engagement"]
+    skills: ["Brand positioning and storytelling", "Product and packaging development", "Customer communication and community building", "Retail partnership development", "Visual content and art direction", "E-commerce and digital engagement"]
   },
   "cross-border-ecommerce-operations": {
     overview: "This work gave me hands-on experience supporting fashion and lifestyle products across international markets, spanning customer communication, supplier coordination, listings, logistics and sales support.",
@@ -111,13 +102,60 @@ export const projectCopy = {
     skills: ["Qualitative research", "Interview analysis", "Journey mapping", "Insight development", "Accessible retail innovation"]
   },
   "marketing-retail-projects": {
-    overview: "These academic projects explore how retail strategy and communication can make sustainability more tangible and participatory for customers.",
-    context: "Sustainability communication can feel abstract, repetitive or difficult to verify. The work asks how retail experiences can make material information easier to encounter, remember and discuss.",
-    role: "I worked as a researcher and concept designer, connecting brand context and customer-engagement objectives with visual retail proposals.",
-    approach: "I explored gamification as a bridge between education and participation, then developed concepts across digital retail interfaces, campaign touchpoints and customer-facing communication.",
-    outcome: "The projects show my ability to move from research and commercial context into a clear customer-facing concept without losing the detail behind the idea.",
-    visuals: "Selected ICICLE proposal spreads show the research, engagement idea and visual development. Final captions and the exact role wording still need confirmation.",
-    skills: ["Retail strategy", "Customer engagement", "Brand communication", "Concept development", "Visual research"]
+    overview: "These projects bring together a series of academic studies in retail and marketing to explore how brands can communicate value more clearly.",
+    context: "Sustainability communication in fashion can often feel abstract, repetitive, or difficult to verify.",
+    role: "Researcher and concept designer",
+    approach: "I analysed brand positioning, audience, retail channels, communication strategy, customer touchpoints, and market context before developing strategic concepts.",
+    outcome: "These projects strengthened my ability to turn research into clear, customer-facing concepts.",
+    visuals: "",
+    sections: [
+      {
+        heading: "Overview",
+        body: [
+          "These projects bring together a series of academic studies in retail and marketing to explore how brands can communicate value more clearly. Across the work, I examined sustainability, digital engagement, retail experience, and customer journey design through strategic research and visual communication.",
+          "A central focus was sustainable fashion, and how brands can make material information, transparency, and brand values feel more tangible through gamification, immersive interfaces, and campaign touchpoints."
+        ]
+      },
+      {
+        heading: "The Question",
+        alignment: "center",
+        body: "How can retail strategy and visual communication make sustainability, brand value, and customer engagement easier to understand, remember, and act on?"
+      },
+      {
+        heading: "The Challenge",
+        body: [
+          "Sustainability communication in fashion can often feel abstract, repetitive, or difficult to verify. Customers are frequently exposed to similar claims across brands without a clear understanding of what makes one product, material, or supply chain more responsible than another.",
+          "The challenge was to translate research into customer-facing experiences that felt visual, interactive, and commercially relevant while still building trust."
+        ]
+      },
+      {
+        heading: "My Approach",
+        body: [
+          "I began by analysing each brand’s positioning, audience, retail channels, and communication strategy, reviewing visual identity, product value, digital platforms, customer touchpoints, and market context. From there, I developed strategic concepts that connected research insights with customer engagement goals.",
+          "Across the projects, I used reports, visualisations, campaign proposals, framework diagrams, and journey maps to test how strategic ideas could be communicated clearly and persuasively."
+        ]
+      },
+      {
+        heading: "What It Led To",
+        alignment: "left",
+        body: [
+          "These projects strengthened my ability to turn research into clear, customer-facing concepts. They also deepened my understanding of how retail strategy, brand communication, and CRM can work together to support engagement before, during, and after purchase.",
+          "The work demonstrates my ability to analyse a brand commercially, identify gaps in customer experience, and translate strategic insights into visual proposals, campaign touchpoints, and retail recommendations."
+        ]
+      },
+      {
+        heading: "Skills Demonstrated",
+        body: {
+          items: [
+            "Retail strategy",
+            "Customer engagement",
+            "Brand communication",
+            "Visual concept development"
+          ]
+        }
+      }
+    ],
+    skills: ["Retail strategy", "Customer engagement", "Brand communication", "Visual concept development"]
   },
   "photography-visual-storytelling": {
     overview: "Photography is an ongoing practice that shapes how I think about visual culture, customer perception and brand storytelling. It trains me to notice texture, light, gesture, display and mood.",

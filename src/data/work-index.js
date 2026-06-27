@@ -44,11 +44,11 @@ export const workIndex = [
     type: "project",
     category: "Retail",
     subcategory: "Brand / Consumer / Strategy",
-    year: "2024–2026",
+    year: "2024–2025",
     route: "project.html?slug=marketing-retail-projects",
     anchor: "",
     keywords: ["retail", "marketing", "brand", "consumer", "strategy", "crm", "gamification"],
-    image: "assets/projects/previews/archive/marketing-retail-icicle-spread-04.png",
+    image: "assets/projects/previews/archive/marketing-retail-collage-spread-04.jpg",
     featured: true
   },
   {

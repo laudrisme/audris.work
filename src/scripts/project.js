@@ -1,5 +1,5 @@
-import { projectCopy } from "../data/project-copy.js";
-import { projectVisuals } from "../data/project-visuals.js?v=20260626-1";
+import { projectCopy } from "../data/project-copy.js?v=20260627-refine";
+import { projectVisuals } from "../data/project-visuals.js?v=20260627-refine";
 import { escapeHtml, loadProjects, renderChrome } from "./shared.js";
 
 renderChrome();
@@ -25,10 +25,11 @@ try {
     { heading: "Outcome / What it shows", body: copy.outcome }
   ];
   const showStandaloneSkills = !copy.sections;
-  const visualSectionNumber = String(sections.length + 1).padStart(2, "0");
-  const visualHeading = copy.visualHeading || "Selected visuals";
+  const visualGroups = buildVisualGroups(sections, selectedVisuals, projectAssets.visualGroups);
+  const downloadSectionNumber = String(sections.length + 1).padStart(2, "0");
 
   document.title = `${project.project_title} — Audris Li`;
+  main.classList.add(`project-page--${slug}`);
   main.innerHTML = `
     <article>
       <header class="page-shell page-top project-hero">
@@ -49,36 +50,20 @@ try {
       </figure>` : ""}
       <div class="page-shell case-study">
         ${sections.map((section, index) => `
-          <section class="case-study__section">
+          <section class="case-study__section${sectionAlignmentClass(section.alignment)}" data-case-study-section="${sectionSlug(section.heading)}">
             <p class="case-study__number">${String(index + 1).padStart(2, "0")}</p>
             <h2>${escapeHtml(section.heading)}</h2>
             <div class="case-study__content">${renderSectionBody(section.body)}</div>
+            ${renderVisualGroups(visualGroups.get(index) || [], slug)}
           </section>`).join("")}
         ${showStandaloneSkills ? `<section class="project-skills" aria-label="Skills demonstrated">
           <p class="eyebrow">Skills demonstrated</p>
           <ul>${copy.skills.map(skill => `<li>${escapeHtml(skill)}</li>`).join("")}</ul>
         </section>` : ""}
       </div>
-      <section class="page-shell project-selected-visuals project-selected-visuals--${escapeHtml(slug)}" aria-labelledby="selected-visuals-title">
-        <header class="project-selected-visuals__header">
-          <p class="case-study__number">${visualSectionNumber}</p>
-          <h2 id="selected-visuals-title">${escapeHtml(visualHeading)}</h2>
-          <p>${escapeHtml(copy.visuals)}</p>
-        </header>
-        ${selectedVisuals.length ? `<div class="project-selected-visuals__grid">
-          ${selectedVisuals.map((visual, index) => `<figure class="project-selected-visual${index === 0 || index % 5 === 3 ? " project-selected-visual--wide" : ""}" data-visual-order="${index + 1}">
-            <div class="project-selected-visual__media">
-              <div class="project-selected-visual__frame">
-                <img src="${escapeHtml(visual.src)}" alt="${escapeHtml(visual.alt)}" loading="${slug === "fashion-styling-visual-direction" && index < 7 ? "eager" : index < 2 ? "eager" : "lazy"}">
-              </div>
-              ${slug !== "marketing-retail-projects" && visual.caption ? `<figcaption>${escapeHtml(visual.caption)}</figcaption>` : ""}
-            </div>
-          </figure>`).join("")}
-        </div>` : `<p class="project-selected-visuals__empty">No selected visuals are available yet. This section will be updated as suitable material is confirmed.</p>`}
-      </section>
       ${downloads.length ? `<section class="page-shell project-downloads" aria-labelledby="project-downloads-title">
         <header class="project-downloads__header">
-          <p class="case-study__number">07</p>
+          <p class="case-study__number">${downloadSectionNumber}</p>
           <h2 id="project-downloads-title">Project downloads</h2>
           <p>Download selected project documents for further detail.</p>
         </header>
@@ -99,6 +84,70 @@ function renderSectionBody(body) {
     }
     return "";
   }).join("");
+}
+
+function sectionSlug(heading = "") {
+  return heading
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function sectionAlignmentClass(alignment = "") {
+  return ["left", "center", "right"].includes(alignment)
+    ? ` case-study__section--text-${alignment}`
+    : "";
+}
+
+function buildVisualGroups(sections, visuals, configuredGroups) {
+  const groupsBySection = new Map();
+  const addGroup = (sectionIndex, group) => {
+    if (!groupsBySection.has(sectionIndex)) groupsBySection.set(sectionIndex, []);
+    groupsBySection.get(sectionIndex).push(group);
+  };
+
+  if (Array.isArray(configuredGroups) && configuredGroups.length) {
+    configuredGroups.forEach(group => {
+      const sectionIndex = Number(group.sectionIndex);
+      const groupVisuals = (group.visualIndexes || [])
+        .map(index => visuals[index])
+        .filter(Boolean);
+      if (Number.isInteger(sectionIndex) && groupVisuals.length) {
+        addGroup(sectionIndex, { ...group, visuals: groupVisuals });
+      }
+    });
+    return groupsBySection;
+  }
+
+  visuals.forEach((visual, index) => {
+    const sectionIndex = Math.min(
+      sections.length - 1,
+      Math.floor((index * sections.length) / Math.max(visuals.length, 1))
+    );
+    const layoutCycle = ["editorial-left", "editorial-right", "editorial-wide", "editorial-center"];
+    addGroup(sectionIndex, {
+      layout: layoutCycle[index % layoutCycle.length],
+      visuals: [visual]
+    });
+  });
+  return groupsBySection;
+}
+
+function renderVisualGroups(groups, projectSlug) {
+  return groups.map((group, groupIndex) => `
+    <div class="case-study__visuals case-study__visuals--${escapeHtml(group.layout || "editorial-left")}" data-visual-group="${groupIndex + 1}">
+      ${group.visuals.map((visual, visualIndex) => `
+        <figure class="case-study__visual">
+          <img
+            src="${escapeHtml(visual.src)}"
+            alt="${escapeHtml(visual.alt)}"
+            loading="${visualIndex === 0 && groupIndex === 0 ? "eager" : "lazy"}"
+            ${visual.transparent ? 'data-transparent="true"' : ""}
+          >
+          ${projectSlug !== "marketing-retail-projects" && visual.caption ? `<figcaption>${escapeHtml(visual.caption)}</figcaption>` : ""}
+        </figure>`).join("")}
+    </div>`).join("");
 }
 
 } catch (error) {

@@ -1,4 +1,4 @@
-const metadataUrl = "data/project_metadata_draft.csv?v=20260626-previews";
+const metadataUrl = "data/project_metadata_draft.csv?v=20260627-zine";
 
 export function parseCsv(text) {
   const rows = [];
