@@ -69,7 +69,7 @@ export function renderChrome() {
           ["work.html", "Work"], ["work/photography-visual-storytelling/", "Photography"],
           ["about.html", "About"], ["contact.html", "Contact"]
         ].map(([href, label]) => `<a href="${href}"${currentPath.endsWith(href) || (label === "Photography" && currentPath.endsWith("photography.html")) ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
-        <a href="assets/documents/cv/audris-li-cv.pdf" target="_blank">Audris’s CV <span aria-hidden="true">↗</span></a>
+        <a href="assets/documents/cv/audris-li-cv.pdf?v=20260627-cv-title" target="_blank">Audris’s CV <span aria-hidden="true">↗</span></a>
       </nav>`;
     const toggle = header.querySelector(".nav-toggle");
     toggle?.addEventListener("click", () => {
