@@ -40,6 +40,7 @@ export const projectCopy = {
       },
       {
         heading: "Retail and Community Channels",
+        contentLayout: "split",
         body: [
           "Rather than relying on paid advertising, Cyta grew through curated physical spaces and word of mouth. I introduced the brand through Pilates studios, yoga studios, meditation spaces, therapy consult rooms, and other wellness-oriented spaces — environments where customers encountered the incense naturally before engaging with the product.",
           "The brand also developed through private Instagram and WeChat communities, extending the relationship beyond the first purchase and creating space to share knowledge about incense, well-being, and traditional culture. Cyta later expanded into workshops and Traditional Chinese six-element consultations, offering a more personalised way to explore scent, material, and lifestyle fit.",
@@ -93,13 +94,55 @@ export const projectCopy = {
     skills: ["Marketplace operations", "Supplier coordination", "Customer communication", "Fulfilment support", "Cross-cultural communication"]
   },
   "ai-customer-experience-research": {
-    overview: "For my postgraduate research, I explored how sustainable fashion brands could use AI-assisted tools to create clearer online experiences for UK Gen Z consumers with ADHD.",
-    context: "The study brought accessibility, consumer behaviour, sustainability and digital trust into one customer journey. It focused on moments where complex navigation, unclear claims or too many choices made decisions harder.",
-    role: "As the researcher, I framed the question, carried out qualitative research, analysed recurring patterns and translated the findings into practical customer-experience recommendations.",
-    approach: "I examined shopping barriers and expectations, mapped where friction appeared and used the findings to consider how AI might reduce cognitive load without adding noise, uncertainty or pressure.",
-    outcome: "The work argues for simpler navigation, specific sustainability information and meaningful customer control. It shows how technology can support confidence when clarity—not novelty—is the design priority.",
-    visuals: "The academic poster summarises the research context, theoretical lens, method and key themes. Journey maps, interview excerpts and process material can be added later if suitable versions are available.",
-    skills: ["Qualitative research", "Interview analysis", "Journey mapping", "Insight development", "Accessible retail innovation"]
+    overview: "For my postgraduate research, I explored how sustainable fashion brands could use AI-assisted tools to improve the online customer experience for UK Gen Z consumers with ADHD.",
+    context: "The project brought together accessibility, consumer behaviour, sustainability and digital trust — areas that are often discussed separately, even though customers experience them all at once.",
+    role: "MA researcher",
+    approach: "I designed a qualitative research project around the experiences of UK Gen Z consumers with ADHD, explored how participants described friction and trust, mapped cognitive load across the shopping experience and translated the findings into practical recommendations.",
+    outcome: "The project produced practical recommendations for sustainable fashion brands designing digital journeys for neurodiverse customers. It reinforced a principle that now guides my work: technology is most valuable when it makes an experience easier to understand, not simply more impressive.",
+    visuals: "Selected research visuals show the question, theoretical frameworks, interview design, thematic analysis and practical recommendations.",
+    sections: [
+      {
+        heading: "Overview",
+        body: [
+          "For my postgraduate research, I explored how sustainable fashion brands could use AI-assisted tools to improve the online customer experience for UK Gen Z consumers with ADHD.",
+          "The project brought together accessibility, consumer behaviour, sustainability and digital trust — areas that are often discussed separately, even though customers experience them all at once."
+        ]
+      },
+      {
+        heading: "The Question",
+        alignment: "left",
+        body: [
+          "How might AI reduce friction in the shopping journey without adding more noise, uncertainty or pressure?",
+          "I focused on moments where complex navigation, unclear sustainability claims or too many choices made it harder for customers to make confident decisions."
+        ]
+      },
+      {
+        heading: "Research Process",
+        body: [
+          "Designed a qualitative research project around the experiences of UK Gen Z consumers with ADHD.",
+          "Explored how participants described friction, overwhelm, trust and support within digital retail journeys.",
+          "Mapped where cognitive load appeared across the shopping experience.",
+          "Translated the findings into practical recommendations for sustainable fashion brands."
+        ]
+      },
+      {
+        heading: "What I Found",
+        body: {
+          items: [
+            "Simpler navigation can reduce cognitive load and make decisions feel more manageable.",
+            "Clear, specific sustainability information is more useful than broad claims.",
+            "AI tools are most valuable when they give customers control, explain what they are doing and support decision-making without becoming intrusive.",
+            "A strong customer journey should prioritise clarity and confidence over novelty."
+          ]
+        }
+      },
+      {
+        heading: "What It Led To",
+        alignment: "right",
+        body: "The project produced practical recommendations for sustainable fashion brands designing digital journeys for neurodiverse customers. More importantly, it reinforced a principle that now guides my work: technology is most valuable when it makes an experience easier to understand, not simply more impressive."
+      }
+    ],
+    skills: ["Qualitative consumer research", "Interview analysis", "Customer journey mapping", "Insight development", "Strategic thinking", "Accessible retail innovation"]
   },
   "marketing-retail-projects": {
     overview: "These projects bring together a series of academic studies in retail and marketing to explore how brands can communicate value more clearly.",
@@ -118,7 +161,7 @@ export const projectCopy = {
       },
       {
         heading: "The Question",
-        alignment: "center",
+        alignment: "right",
         body: "How can retail strategy and visual communication make sustainability, brand value, and customer engagement easier to understand, remember, and act on?"
       },
       {

@@ -5,7 +5,7 @@ export const projectVisuals = {
       { src: "assets/projects/cyta/selected-visuals/02-cyta-lace-logo.png", alt: "Transparent lace-inspired Cyta identity with stars, wings and the kite character", caption: "", transparent: true },
       { src: "assets/projects/cyta/selected-visuals/03-cyta-packaging-editorial.png", alt: "Cyta incense packaging presented within a pale lace-patterned editorial composition", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/04-cyta-studio-workshop.jpeg", alt: "Incense tubes and a ceramic burner arranged in the Cyta studio", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/05.jpeg", alt: "Close view of a black Cyta incense tube and red tassel on a wooden surface", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/05-incense-tube-sample.jpeg", alt: "Close view of a black Cyta incense tube and red tassel on a wooden surface", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/06-cyta-incense-materials-01.JPG", alt: "Jar of jasmine buds shown with a traditional Chinese materia medica reference", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/07-cyta-incense-materials-02.jpeg", alt: "Hand selecting labelled incense materials during formulation research", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/08-cyta-incense materials-03.JPG", alt: "Dried citrus ingredients arranged in a ceramic vessel for incense formulation", caption: "" },
@@ -25,17 +25,33 @@ export const projectVisuals = {
     selectedVisuals: [
       { src: "assets/projects/cross-border-ecommerce/selected-visuals/01-ecommerce-digital-printing.jpg", alt: "Digital textile printing machine in operation", caption: "Digital printing observed as part of the product and supplier workflow." },
       { src: "assets/projects/cross-border-ecommerce/selected-visuals/02-ecommerce-production-machinery.jpg", alt: "Rows of production machinery inside a supplier facility", caption: "Production capacity and machinery reviewed during supplier coordination." },
-      { src: "assets/projects/cross-border-ecommerce/selected-visuals/03-ecommerce-supplier-visit.jpg", alt: "Team walking through a supplier warehouse", caption: "Supplier visit supporting clearer communication across production and fulfilment." }
+      { src: "assets/projects/cross-border-ecommerce/selected-visuals/03-ecommerce-customise-process.jpg", alt: "Apparel customisation artwork displayed in garment design software", caption: "Customisation artwork reviewed during product development." }
     ]
   },
   "ai-customer-experience-research": {
     selectedVisuals: [
       { src: "assets/projects/ai-cx-research/selected-visuals/01-ai-cx-academic-poster.png", alt: "Academic poster about sustainable fashion AI and customer experience for Gen Z consumers with ADHD", caption: "Academic poster summarising the research question, method and key findings." },
-      { src: "assets/projects/ai-cx-research/selected-visuals/02-ai-cx-thematic-map.png", alt: "Thematic map of three AI customer experience research themes", caption: "Thematic map connecting cognitive load, trust and assistive AI." },
-      { src: "assets/projects/ai-cx-research/selected-visuals/03-ai-cx-interventions-map.png", alt: "Table mapping AI interventions to ADHD customer experience challenges", caption: "Intervention map translating behavioural challenges into possible customer-experience support." },
-      { src: "assets/projects/ai-cx-research/selected-visuals/04-ai-cx-interview-design.png", alt: "Research table showing the semi-structured interview design", caption: "Interview structure linking research objectives, questions and supporting theory." },
-      { src: "assets/projects/ai-cx-research/selected-visuals/05-ai-cx-planned-behaviour.png", alt: "Theory of Planned Behaviour diagram used in the research", caption: "Theory of Planned Behaviour used as one lens for understanding intention and action." },
-      { src: "assets/projects/ai-cx-research/selected-visuals/06-ai-cx-technology-acceptance.png", alt: "Technology Acceptance Model diagram used in the research", caption: "Technology Acceptance Model used to consider usefulness, ease and adoption." }
+      { src: "assets/projects/ai-cx-research/selected-visuals/02-ai-cx-interventions-map.png", alt: "Table mapping AI interventions to ADHD customer experience challenges", caption: "Intervention map translating behavioural challenges into possible customer-experience support." },
+      { src: "assets/projects/ai-cx-research/selected-visuals/03-ai-cx-planned-behaviour.png", alt: "Theory of Planned Behaviour diagram used in the research", caption: "Theory of Planned Behaviour helped frame intention, attitude and perceived behavioural control." },
+      { src: "assets/projects/ai-cx-research/selected-visuals/04-ai-cx-technology-acceptance.png", alt: "Technology Acceptance Model diagram used in the research", caption: "The Technology Acceptance Model helped frame perceived usefulness and ease of use in AI-supported retail journeys." },
+      { src: "assets/projects/ai-cx-research/selected-visuals/05-ai-cx-interview-design.png", alt: "Research table showing the semi-structured interview design", caption: "Interview structure linking research objectives, questions and supporting theory." },
+      { src: "assets/projects/ai-cx-research/selected-visuals/06-ai-cx-thematic-map.png", alt: "Thematic map of three AI customer experience research themes", caption: "The project showed that AI is most useful when it reduces friction, clarifies information and gives customers more control." }
+    ],
+    visualGroups: [
+      { sectionIndex: 0, layout: "ai-poster-summary", visualIndexes: [0] },
+      { sectionIndex: 1, layout: "ai-question-map", visualIndexes: [1] },
+      { sectionIndex: 2, layout: "ai-framework-pair", visualIndexes: [2, 3] },
+      {
+        sectionIndex: 2,
+        layout: "ai-interview-full",
+        visualIndexes: [4],
+        notes: [
+          "Reduce cognitive load",
+          "Improve trust and sustainability clarity",
+          "Support speed and accuracy through assistive AI"
+        ]
+      },
+      { sectionIndex: 3, layout: "ai-thematic-full", visualIndexes: [5] }
     ]
   },
   "marketing-retail-projects": {

@@ -1,7 +1,7 @@
 import { photographySections, getPhotographyImages } from "../data/photography-sections.js";
 import { projectCopy } from "../data/project-copy.js";
 import { workIndex } from "../data/work-index.js";
-import { escapeHtml, loadProjects, renderChrome } from "./shared.js";
+import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260627-cv-label";
 
 renderChrome();
 
@@ -63,7 +63,11 @@ try {
           <div><dt>What it shows</dt><dd>${escapeHtml(copy.outcome)}</dd></div>
           <div><dt>Selected visuals</dt><dd>${escapeHtml(copy.visuals)}</dd></div>
         </dl>
-      </div>` : ""}
+      </div>
+      <section class="project-skills project-skills--photography" aria-label="Skills demonstrated">
+        <p class="eyebrow">Skills demonstrated</p>
+        <ul>${copy.skills.map(skill => `<li>${escapeHtml(skill)}</li>`).join("")}</ul>
+      </section>` : ""}
       ${sectionVisualsMarkup(section, images)}
     </section>`;
   }).join("");

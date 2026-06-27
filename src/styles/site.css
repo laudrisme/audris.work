@@ -180,6 +180,118 @@ button { color: inherit; font: inherit; }
 .contact-links i { font-style: normal; text-align: right; }
 .contact-note { margin: 80px 0 0; }
 
+.project-editorial-page { background: #f7f6ef; }
+.project-editorial-page .site-header {
+  background: rgba(247,246,239,.88);
+  backdrop-filter: blur(12px);
+}
+.project-context-bar {
+  position: fixed;
+  z-index: 18;
+  top: 72px;
+  right: 18px;
+  width: min(430px, calc(100vw - 36px));
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 9px;
+  border: 1px solid rgba(64,105,134,.45);
+  background: rgba(201,231,255,.9);
+  box-shadow: 0 3px 12px rgba(35,45,52,.08);
+  color: #26333c;
+  font-size: 9px;
+  letter-spacing: .06em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity .28s ease, transform .28s ease, color .28s ease, background .28s ease;
+}
+.project-context-bar.is-visible,
+.project-context-bar.is-reduced-motion,
+.project-context-bar:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.project-context-bar.is-visual-context {
+  border-color: rgba(28,40,48,.6);
+  background: rgba(30,42,50,.88);
+  color: #f7f6ef;
+}
+.project-context-bar a { text-decoration: underline; text-underline-offset: 3px; }
+.project-context-name {
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-context-bar > span:last-child { text-align: right; }
+.project-editorial-document { padding-top: clamp(155px, 17vw, 235px); }
+.project-editorial-document .project-hero {
+  padding-bottom: clamp(70px, 10vw, 130px);
+}
+.project-file-notes {
+  align-self: end;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.project-file-notes div {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  gap: 15px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+.project-file-notes dt {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.project-file-notes dd {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.25;
+}
+.project-editorial-document .project-cover { width: min(1320px, calc(100% - 64px)); }
+.project-editorial-document .case-study { margin-top: clamp(110px, 14vw, 190px); }
+.project-editorial-document .case-study__section { padding-bottom: clamp(105px, 13vw, 185px); }
+.project-editorial-document .case-study__content {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.project-editorial-document .case-study__content p + p { margin-top: 1.25em; }
+.project-editorial-document .project-downloads { margin-bottom: 60px; }
+.project-endnote {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 90px;
+  padding: 18px 0 4px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+}
+.project-endnote a { color: var(--ink); }
+.project-endnote a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.project-editorial-page .site-footer { margin-top: 70px; }
+.project-motion-ready .project-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s cubic-bezier(.22,.65,.25,1) var(--reveal-delay, 0ms), transform .7s cubic-bezier(.22,.65,.25,1) var(--reveal-delay, 0ms);
+}
+.project-motion-ready .case-study__visual.project-reveal { transform: translateY(24px) scale(.996); }
+.project-motion-ready .project-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.project-page--ai-customer-experience-research .case-study__visuals {
+  padding-top: clamp(20px, 3vw, 38px);
+  border-top: 1px solid rgba(113,113,104,.35);
+}
+
 .project-hero { display: grid; grid-template-columns: 1.5fr .5fr; gap: 8vw; align-items: end; padding-bottom: 70px; }
 .project-hero__summary { max-width: 730px; margin: 38px 0 0; font-family: var(--serif); font-size: 28px; line-height: 1.15; }
 .project-facts { margin: 0; border-top: 1px solid var(--line); }
@@ -196,6 +308,23 @@ button { color: inherit; font: inherit; }
 .case-study__content p:first-child { margin-top: 0; }
 .case-study__content p:last-child { margin-bottom: 0; }
 .case-study__content ul { margin: 10px 0 0; padding-left: 18px; }
+.case-study__content-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(210px, .65fr);
+  gap: clamp(42px, 7vw, 110px);
+  align-items: start;
+}
+.case-study__content-split p:first-child { margin-top: 0; }
+.case-study__content-aside {
+  padding-top: 3px;
+  border-top: 1px solid var(--line);
+}
+.case-study__content-aside > p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 20px;
+}
+.case-study__content-aside ul { margin-top: 18px; }
 .case-study__section--text-right .case-study__content {
   justify-self: end;
   text-align: right;
@@ -238,6 +367,28 @@ button { color: inherit; font: inherit; }
   line-height: 1.45;
   text-align: left;
 }
+.case-study__visual-notes {
+  grid-column: 1 / 13;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 42px);
+  margin-top: clamp(18px, 3vw, 38px);
+}
+.case-study__visual-notes article {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.case-study__visual-notes span {
+  color: var(--muted);
+  font-size: 9px;
+}
+.case-study__visual-notes p {
+  max-width: 260px;
+  margin: 8px 0 0;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.2;
+}
 .case-study__visuals--editorial-left .case-study__visual { grid-column: 1 / 8; }
 .case-study__visuals--editorial-right .case-study__visual { grid-column: 6 / 13; }
 .case-study__visuals--editorial-center .case-study__visual { grid-column: 3 / 11; }
@@ -258,19 +409,22 @@ button { color: inherit; font: inherit; }
 .case-study__visuals--cyta-approach-stack .case-study__visual + .case-study__visual { margin-top: clamp(18px, 3vw, 42px); }
 .case-study__visuals--cyta-evidence-pair {
   margin-top: clamp(42px, 6vw, 82px);
-  align-items: center;
+  align-items: start;
 }
-.case-study__visuals--cyta-evidence-pair .case-study__visual:first-child { grid-column: 5 / 9; }
-.case-study__visuals--cyta-evidence-pair .case-study__visual:last-child { grid-column: 9 / 13; }
+.case-study__visuals--cyta-evidence-pair .case-study__visual:first-child { grid-column: 3 / 7; }
+.case-study__visuals--cyta-evidence-pair .case-study__visual:last-child { grid-column: 7 / 11; }
 .case-study__visuals--cyta-evidence-pair .case-study__visual {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   height: min(46vw, 560px);
 }
 .case-study__visuals--cyta-evidence-pair img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center top;
 }
 
 /* Marketing collages keep a consistent page-spread width without cropping. */
@@ -282,6 +436,58 @@ button { color: inherit; font: inherit; }
 }
 .case-study__visuals--marketing-collage-spreads .case-study__visual + .case-study__visual {
   margin-top: clamp(20px, 4vw, 58px);
+}
+
+/* AI research follows the source document's method-to-finding sequence. */
+.case-study__visuals--ai-poster-summary .case-study__visual { grid-column: 3 / 11; }
+.case-study__visuals--ai-question-map .case-study__visual { grid-column: 4 / 13; }
+.case-study__visuals--ai-framework-pair .case-study__visual:first-child { grid-column: 1 / 7; }
+.case-study__visuals--ai-framework-pair .case-study__visual:last-child { grid-column: 7 / 13; }
+.case-study__visuals--ai-interview-full .case-study__visual,
+.case-study__visuals--ai-thematic-full .case-study__visual { grid-column: 1 / 13; }
+
+/* Project-specific text/image pairings retain the shared editorial system. */
+.project-page--marketing-retail-projects [data-case-study-section="overview"] > h2,
+.project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > h2,
+.project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > h2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.project-page--marketing-retail-projects [data-case-study-section="overview"] > .case-study__content,
+.project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > .case-study__content,
+.project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > .case-study__content {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  margin-top: clamp(28px, 4vw, 58px);
+  text-align: left;
+}
+.project-page--marketing-retail-projects [data-case-study-section="overview"] > .case-study__visuals,
+.project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > .case-study__visuals,
+.project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > .case-study__visuals {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: start;
+  margin-top: clamp(28px, 4vw, 58px);
+}
+.project-page--marketing-retail-projects [data-case-study-section="overview"] > .case-study__visuals .case-study__visual,
+.project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > .case-study__visuals .case-study__visual,
+.project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > .case-study__visuals .case-study__visual {
+  grid-column: 1 / 13;
+}
+.project-page--marketing-retail-projects [data-case-study-section="overview"] > .case-study__visuals,
+.project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > .case-study__visuals {
+  justify-self: end;
+  width: 100%;
+}
+.project-page--cyta-sustainable-incense-brand [data-case-study-section="retail-and-community-channels"] > .case-study__content {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  max-width: none;
+  margin-top: clamp(35px, 5vw, 70px);
+}
+.project-page--cyta-sustainable-incense-brand [data-case-study-section="retail-and-community-channels"] > .case-study__visuals {
+  grid-row: 3;
 }
 .project-selected-visuals { margin-top: 130px; padding-top: 34px; border-top: 1px solid var(--line); }
 .project-selected-visuals__header { display: grid; grid-template-columns: 60px 1fr 1fr; gap: 30px; margin-bottom: clamp(55px, 8vw, 110px); }
@@ -385,6 +591,45 @@ button { color: inherit; font: inherit; }
   .about-details { grid-template-columns: 1fr; }
   .contact-page__lead { font-size: 24px; }
   .contact-links a { grid-template-columns: 80px 1fr 20px; }
+  .project-context-bar {
+    top: 66px;
+    right: 10px;
+    width: calc(100vw - 20px);
+    grid-template-columns: auto 1fr;
+  }
+  .project-context-name { display: none; }
+  .project-editorial-document { padding-top: 135px; }
+  .project-editorial-document .project-hero { gap: 50px; padding-bottom: 58px; }
+  .project-file-notes div { grid-template-columns: 65px 1fr; }
+  .project-editorial-document .project-cover { width: 100%; }
+  .project-editorial-document .case-study { margin-top: 80px; }
+  .project-editorial-document .case-study__section { padding-bottom: 105px; }
+  .project-endnote { margin-top: 65px; }
+  .project-page--ai-customer-experience-research .case-study__visuals .case-study__visual { grid-column: 1 / 13; }
+  .case-study__content-split { grid-template-columns: 1fr; gap: 38px; }
+  .case-study__visual-notes { grid-template-columns: 1fr; gap: 22px; }
+  .project-page--marketing-retail-projects [data-case-study-section="overview"] > h2,
+  .project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > h2,
+  .project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > h2 {
+    grid-column: 2;
+    grid-row: auto;
+  }
+  .project-page--marketing-retail-projects [data-case-study-section="overview"] > .case-study__content,
+  .project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > .case-study__content,
+  .project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > .case-study__content,
+  .project-page--cyta-sustainable-incense-brand [data-case-study-section="retail-and-community-channels"] > .case-study__content {
+    grid-column: 2;
+    grid-row: auto;
+    margin-top: 18px;
+  }
+  .project-page--marketing-retail-projects [data-case-study-section="overview"] > .case-study__visuals,
+  .project-page--marketing-retail-projects [data-case-study-section="what-it-led-to"] > .case-study__visuals,
+  .project-page--cyta-sustainable-incense-brand [data-case-study-section="my-approach"] > .case-study__visuals,
+  .project-page--cyta-sustainable-incense-brand [data-case-study-section="retail-and-community-channels"] > .case-study__visuals {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    margin-top: 42px;
+  }
   .project-facts--compact { grid-column: auto; }
   .project-cover { width: 100%; }
   .case-study__section { grid-template-columns: 35px 1fr; }
@@ -551,6 +796,14 @@ button { color: inherit; font: inherit; }
   background: #ffc9dc;
   content: "";
 }
+.desktop-home .desktop-folder {
+  border-color: #4f84ad;
+  background: linear-gradient(180deg, #bfe1ff, #8ec9ff);
+}
+.desktop-home .desktop-folder::before {
+  border-color: #4f84ad;
+  background: #a9d7ff;
+}
 .desktop-document {
   width: 38px;
   height: 49px;
@@ -645,7 +898,7 @@ button { color: inherit; font: inherit; }
   max-height: none;
   border: 1px solid #77776e;
   background: transparent;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 .archive-preview div { padding-top: 10px; }
@@ -728,6 +981,7 @@ button { color: inherit; font: inherit; }
 .project-skills { margin: 20px 0 0; padding: 28px 0 0; border-top: 1px solid var(--line); }
 .project-skills ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
 .project-skills li { padding: 6px 10px; border: 1px solid var(--line); font-size: 11px; }
+.project-skills--photography { margin: 0 0 90px; }
 
 @media (max-width: 1040px) {
   .desktop-archive { width: calc(100vw - 230px); }
