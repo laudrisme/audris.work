@@ -25,8 +25,9 @@ export const photographySections = [
     title: "Objects and Texture",
     displayTitle: true,
     layout: "asymmetric",
-    images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg"],
-    dimensions: [[4384, 5845], [3890, 5187], [3354, 4472], [3536, 4714], [3710, 4948], [3817, 5089], [4362, 5816], [5205, 3904]]
+    assetVersion: "20260628-objects",
+    images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"],
+    dimensions: [[4384, 5845], [3890, 5187], [4472, 3354], [3536, 4714], [3354, 4472], [3710, 4948], [3817, 5089], [4362, 5816], [5205, 3904]]
   },
   {
     id: "04-place-and-atmosphere",
@@ -36,10 +37,9 @@ export const photographySections = [
     layout: "essay",
     images: [
       "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpeg",
-      "06.jpeg", "07.jpg", "08.jpeg", "09.jpg",
-      { file: "10.jpeg", duplicateOf: "09.jpg", include: false }
+      "06.jpeg", "07.jpg", "08.jpeg", "09.jpg"
     ],
-    dimensions: [[2048, 2694], [4492, 5989], [2649, 3311], [4492, 5989], [2228, 2971], [2228, 2971], [2048, 2731], [2048, 2731], [3649, 4865], [3649, 4865]]
+    dimensions: [[2048, 2694], [4492, 5989], [2649, 3311], [4492, 5989], [2228, 2971], [2228, 2971], [2048, 2731], [2048, 2731], [3649, 4865]]
   },
   {
     id: "05-closing",
@@ -48,8 +48,9 @@ export const photographySections = [
     title: "✩",
     displayTitle: true,
     layout: "closing",
+    assetVersion: "20260628-closing",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
-    dimensions: [[2117, 3764], [2117, 3764], [1854, 3090], [1739, 3091]]
+    dimensions: [[2117, 3764], [2117, 3764], [1738, 3090], [1739, 3091]]
   }
 ];
 
@@ -64,7 +65,7 @@ export function getPhotographyImages(section) {
     .map((image, index) => ({
       ...image,
       order: index + 1,
-      src: `assets/projects/photography/curated-sections/${section.id}/${image.file}`,
+      src: `assets/projects/photography/curated-sections/${section.id}/${image.file}${section.assetVersion ? `?v=${section.assetVersion}` : ""}`,
       alt: `Photography and Visual Storytelling, ${section.title || "opening and closing"}, image ${String(index + 1).padStart(2, "0")}`,
       caption: "TODO — add caption if context improves the sequence."
     }));

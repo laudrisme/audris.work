@@ -1,4 +1,4 @@
-import { photographySections, getPhotographyImages } from "../data/photography-sections.js";
+import { photographySections, getPhotographyImages } from "../data/photography-sections.js?v=20260628-section-layout-2";
 import { projectCopy } from "../data/project-copy.js";
 import { workIndex } from "../data/work-index.js";
 import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260627-cv-label";
@@ -25,6 +25,16 @@ function sectionVisualsMarkup(section, images) {
   }
   if (section.anchor === "star") {
     return `<div class="photo-works-grid photo-works-grid--star">
+      ${images.map((image, index) => imageMarkup(image, section, index)).join("")}
+    </div>`;
+  }
+  if (section.anchor === "objects-and-texture") {
+    return `<div class="photo-works-grid photo-works-grid--objects">
+      ${images.map((image, index) => imageMarkup(image, section, index)).join("")}
+    </div>`;
+  }
+  if (section.anchor === "place-and-atmosphere") {
+    return `<div class="photo-works-grid photo-works-grid--places">
       ${images.map((image, index) => imageMarkup(image, section, index)).join("")}
     </div>`;
   }
