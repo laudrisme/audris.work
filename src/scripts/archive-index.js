@@ -1,17 +1,23 @@
-import { workFilters, workEntryHref, workIndex } from "../data/work-index.js?v=20260627-small-fixes";
+import { workFilters, workEntryHref, workIndex } from "../data/work-index.js?v=20260628-multitag-filters";
 import { escapeHtml } from "./shared.js";
 
 function matchesFilter(entry, filter) {
   if (filter === "All") return true;
-  const haystack = [entry.title, entry.type, entry.category, entry.subcategory, entry.year, ...entry.keywords]
-    .join(" ")
-    .toLowerCase();
-  return haystack.includes(filter.toLowerCase());
+  const filterTags = entry.filterTags || [entry.category];
+  return filterTags.some(tag => tag.toLowerCase() === filter.toLowerCase());
 }
 
 function matchesSearch(entry, query) {
   if (!query) return true;
-  const haystack = [entry.title, entry.type, entry.category, entry.subcategory, entry.year, ...entry.keywords]
+  const haystack = [
+    entry.title,
+    entry.type,
+    entry.category,
+    entry.subcategory,
+    entry.year,
+    ...(entry.filterTags || []),
+    ...entry.keywords
+  ]
     .join(" ")
     .toLowerCase();
   return query.toLowerCase().trim().split(/\s+/).every(term => haystack.includes(term));

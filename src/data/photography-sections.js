@@ -25,9 +25,9 @@ export const photographySections = [
     title: "Objects and Texture",
     displayTitle: true,
     layout: "asymmetric",
-    assetVersion: "20260628-objects",
-    images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"],
-    dimensions: [[4384, 5845], [3890, 5187], [4472, 3354], [3536, 4714], [3354, 4472], [3710, 4948], [3817, 5089], [4362, 5816], [5205, 3904]]
+    assetVersion: "20260629-objects-layout-reference",
+    images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpeg", "07.jpeg", "08.jpg", "09.jpg"],
+    dimensions: [[4384, 5845], [3890, 5187], [4472, 3354], [3536, 4714], [3354, 4472], [3710, 4948], [4183, 5577], [4362, 5816], [5205, 3904]]
   },
   {
     id: "04-place-and-atmosphere",
