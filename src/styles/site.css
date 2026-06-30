@@ -1122,7 +1122,6 @@ button { color: inherit; font: inherit; }
 .photo-overview-copy dl div { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 11px 0; border-bottom: 1px solid var(--line); }
 .photo-overview-copy dt { color: var(--muted); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
 .photo-overview-copy dd { margin: 0; font-family: var(--serif); font-size: 16px; line-height: 1.3; }
-.copy-status { display: inline-block; margin: 24px 0 0; padding: 5px 8px; border: 1px solid var(--line); color: var(--muted); font-size: 10px; }
 .project-skills { margin: 20px 0 0; padding: 28px 0 0; border-top: 1px solid var(--line); }
 .project-skills ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
 .project-skills li { padding: 6px 10px; border: 1px solid var(--line); font-size: 11px; }

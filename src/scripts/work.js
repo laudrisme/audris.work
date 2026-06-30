@@ -1,5 +1,5 @@
 import { initArchiveIndex } from "./archive-index.js?v=20260628-multitag-filters";
-import { renderChrome } from "./shared.js?v=20260627-cv-label";
+import { renderChrome } from "./shared.js?v=20260630-publish-cleanup";
 
 renderChrome();
 

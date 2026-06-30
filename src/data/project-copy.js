@@ -208,16 +208,5 @@ export const projectCopy = {
     outcome: "The sequence shows how visual hierarchy, composition and art direction can make a place, product or moment feel believable before it is fully explained.",
     visuals: "Thirty-two curated images are organised into Overview, Fashion Styling, Objects and Texture, Place and Atmosphere and a final ✩ sequence.",
     skills: ["Photography", "Art direction", "Composition", "Sequencing", "Visual storytelling"]
-  },
-  "fashion-styling-visual-direction": {
-    overview: "A developing fashion-image practice that brings together portraiture, still life, collage and movement. This text is an editable draft until the project is defined as a standalone case study.",
-    context: "The work currently sits within the broader Photography and Visual Storytelling archive, where styling is treated as part of image-making rather than a separate commercial campaign.",
-    role: "Stylist / visual director — wording, collaborators and individual responsibilities still need confirmation.",
-    approach: "The available images suggest an approach built around colour, gesture, material contrast and simple editorial staging across portraits and still-life studies.",
-    outcome: "The selection shows an interest in directing mood and creating visual relationships between clothing, body, object and space. A stronger outcome statement needs project-specific evidence.",
-    visuals: "The current cover and the Fashion Styling sequence in Photography are the available visual evidence. A distinct final edit, captions and credits are still needed.",
-    skills: ["Fashion styling", "Visual direction", "Portraiture", "Still life", "Image sequencing"],
-    coverImage: "assets/projects/previews/main/fashion-styling-cover-revolution-01.jpg",
-    placeholder: true
   }
 };

@@ -67,6 +67,6 @@ export function getPhotographyImages(section) {
       order: index + 1,
       src: `assets/projects/photography/curated-sections/${section.id}/${image.file}${section.assetVersion ? `?v=${section.assetVersion}` : ""}`,
       alt: `Photography and Visual Storytelling, ${section.title || "opening and closing"}, image ${String(index + 1).padStart(2, "0")}`,
-      caption: "TODO — add caption if context improves the sequence."
+      caption: ""
     }));
 }

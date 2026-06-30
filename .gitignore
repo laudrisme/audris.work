@@ -23,6 +23,18 @@ archive/
 assets/archive/
 design-references/
 exports/
+!assets/projects/previews/archive/
+!assets/projects/previews/archive/**
+assets/projects/previews/archive/.DS_Store
+assets/projects/previews/archive/**/.DS_Store
+!assets/archive/
+assets/archive/*
+!assets/archive/source-documents/
+assets/archive/source-documents/*
+assets/archive/source-documents/.DS_Store
+!assets/archive/source-documents/marketing-retail-bachelor-fmp-illustrated-report-01.pdf
+!assets/archive/source-documents/marketing-retail-bachelor-fmp-creative-outcome-01.pdf
+!assets/archive/source-documents/marketing-retail-icicle-proposal-01.pdf
 
 # Editable source documents that are not served by the site
 content/source/

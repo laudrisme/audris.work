@@ -68,21 +68,9 @@ export const projectVisuals = {
       { sectionIndex: 4, layout: "marketing-context", visualIndexes: [4] }
     ],
     downloads: [
-      { title: "Bachelor Final Major Project — Illustrated Report", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-illustrated-report-01.pdf", filename: "audris-li-fmp-illustrated-report.pdf", meta: "PDF · 45 MB" },
-      { title: "Bachelor Final Major Project — Creative Outcome", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-creative-outcome-01.pdf", filename: "audris-li-fmp-creative-outcome.pdf", meta: "PDF · 57 MB" },
-      { title: "ICICLE Business Proposal", href: "assets/archive/source-documents/marketing-retail-icicle-proposal-01.pdf", filename: "audris-li-icicle-business-proposal.pdf", meta: "PDF · 36 MB" }
-    ]
-  },
-  "fashion-styling-visual-direction": {
-    selectedVisuals: [
-      { src: "assets/projects/fashion-styling/selected-visuals/01-styling-motion-portrait.jpg", alt: "Fashion portrait using warm light and motion blur", caption: "Motion portrait exploring gesture, colour and an intentionally cinematic blur." },
-      { src: "assets/projects/fashion-styling/selected-visuals/02-styling-horizontal-portrait.jpg", alt: "Horizontal fashion portrait of a model in a gold dress", caption: "A horizontal portrait balancing theatrical styling with a minimal dark setting." },
-      { src: "assets/projects/fashion-styling/selected-visuals/03-styling-editorial-portrait.jpg", alt: "Editorial fashion portrait with graphic dress detail", caption: "Editorial portrait focused on silhouette, expression and graphic surface detail." },
-      { src: "assets/projects/fashion-styling/selected-visuals/04-styling-editorial-gesture.jpg", alt: "Editorial fashion portrait showing an expressive gesture", caption: "Gesture-led portrait extending the project’s playful movement language." },
-      { src: "assets/projects/fashion-styling/selected-visuals/05-styling-still-life-table.jpg", alt: "Fashion still-life portrait staged at a table", caption: "Table study bringing styling, jewellery and quiet performance into one frame." },
-      { src: "assets/projects/fashion-styling/selected-visuals/06-styling-still-life-detail.jpg", alt: "Close fashion portrait framed through a white surface", caption: "Close detail using framing and jewellery to direct attention." },
-      { src: "assets/projects/fashion-styling/selected-visuals/07-styling-behind-scenes-portrait.jpg", alt: "Behind-the-scenes fashion portrait against a dark background", caption: "Behind-the-scenes portrait documenting the visual direction in progress." },
-      { src: "assets/projects/fashion-styling/selected-visuals/08-styling-collage-motion.jpg", alt: "Fashion collage frame showing a model in motion", caption: "Collage study isolating a single movement within the wider sequence." }
+      { title: "Bachelor Final Major Project — Illustrated Report", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-illustrated-report-01.pdf", filename: "audris-li-fmp-illustrated-report.pdf", meta: "PDF · 18.3 MB" },
+      { title: "Bachelor Final Major Project — Creative Outcome", href: "assets/archive/source-documents/marketing-retail-bachelor-fmp-creative-outcome-01.pdf", filename: "audris-li-fmp-creative-outcome.pdf", meta: "PDF · 28.9 MB" },
+      { title: "ICICLE Business Proposal", href: "assets/archive/source-documents/marketing-retail-icicle-proposal-01.pdf", filename: "audris-li-icicle-business-proposal.pdf", meta: "PDF · 15.0 MB" }
     ]
   }
 };

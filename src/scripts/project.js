@@ -1,6 +1,6 @@
 import { projectCopy } from "../data/project-copy.js?v=20260627-layout-notes";
-import { projectVisuals } from "../data/project-visuals.js?v=20260627-small-fixes";
-import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260627-cv-label";
+import { projectVisuals } from "../data/project-visuals.js?v=20260630-pdf-size-labels";
+import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260630-publish-cleanup";
 
 renderChrome();
 
@@ -44,13 +44,11 @@ try {
           <p class="eyebrow">Archive entry / ${escapeHtml(project.category)}</p>
           <h1 id="project-title">${escapeHtml(project.project_title)}</h1>
           <p class="project-hero__summary">${escapeHtml(project.one_line_summary)}</p>
-          ${copy.placeholder ? '<p class="copy-status">Editable project draft — details marked for confirmation.</p>' : ""}
         </div>
         <dl class="project-file-notes" aria-label="Project details">
           <div><dt>Category</dt><dd>${escapeHtml(project.category)}</dd></div>
           <div><dt>Year</dt><dd>${escapeHtml(project.year)}</dd></div>
           <div><dt>Role</dt><dd>${escapeHtml(project.role)}</dd></div>
-          <div><dt>Status</dt><dd>${escapeHtml(project.status || "Selected work")}</dd></div>
         </dl>
       </header>
       ${showCoverImage ? `<figure class="project-cover">
@@ -76,7 +74,7 @@ try {
           <p>Download selected project documents for further detail.</p>
         </header>
         <div class="project-downloads__list">
-          ${downloads.map(download => `<a href="${escapeHtml(download.href)}" download="${escapeHtml(download.filename)}">
+          ${downloads.map(download => `<a href="${escapeHtml(download.href)}" target="_blank" rel="noopener noreferrer">
             <span>${escapeHtml(download.title)}</span>
             <small>${escapeHtml(download.meta)} · Download ↓</small>
           </a>`).join("")}

@@ -1,20 +1,21 @@
 import { photographySections, getPhotographyImages } from "../data/photography-sections.js?v=20260629-reference-layout";
 import { projectCopy } from "../data/project-copy.js";
 import { workIndex } from "../data/work-index.js";
-import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260627-cv-label";
+import { escapeHtml, loadProjects, renderChrome } from "./shared.js?v=20260630-publish-cleanup";
 
 renderChrome();
 
 const intro = document.querySelector("[data-photography-intro]");
 const sectionIndex = document.querySelector("[data-photography-index]");
 const essay = document.querySelector("[data-photography-essay]");
+const photographyPageHref = "work/photography-visual-storytelling/index.html";
 
 function imageMarkup(image, section, index, lead = false, className = "", variant = "") {
   const rhythm = variant || (lead ? "lead" : ["tile-a", "tile-b", "tile-wide", "tile-small"][index % 4]);
   const classes = ["photo", `photo--${rhythm}`, className].filter(Boolean).join(" ");
   return `<figure class="${classes}">
     <img src="${image.src}" alt="${escapeHtml(image.alt)}" width="${image.width}" height="${image.height}" loading="${lead && section.layout === "opening" ? "eager" : "lazy"}">
-    <figcaption class="visually-hidden">${escapeHtml(image.caption)}</figcaption>
+    ${image.caption ? `<figcaption class="visually-hidden">${escapeHtml(image.caption)}</figcaption>` : ""}
   </figure>`;
 }
 
@@ -116,7 +117,7 @@ try {
   sectionIndex.innerHTML = photographySections.map((section, index) => {
     const sectionImages = getPhotographyImages(section);
     const first = sectionImages.find(image => image.file === section.previewImage) || sectionImages[0];
-    return `<a href="#${section.anchor}" class="photography-index-card">
+    return `<a href="${photographyPageHref}#${section.anchor}" class="photography-index-card">
       <img src="${first.src}" alt="Preview of ${escapeHtml(section.title)}" width="${first.width}" height="${first.height}" loading="${index < 2 ? "eager" : "lazy"}">
       <span><i>${String(index + 1).padStart(2, "0")}</i>${escapeHtml(section.title)}</span>
     </a>`;
@@ -125,7 +126,7 @@ try {
   essay.innerHTML = photographySections.map(section => {
     const images = getPhotographyImages(section);
     return `<section class="photo-section photo-section--${section.layout}" id="${section.anchor}">
-      <header class="photo-section__title"><p>${section.id.slice(0, 2)}</p><h2>${escapeHtml(section.title)}</h2><a href="#top">Index ↑</a></header>
+      <header class="photo-section__title"><p>${section.id.slice(0, 2)}</p><h2>${escapeHtml(section.title)}</h2><a href="${photographyPageHref}#top">Index ↑</a></header>
       ${section.anchor === "overview" ? `<div class="photo-overview-copy">
         <p class="photo-overview-copy__lead">${escapeHtml(copy.overview)}</p>
         <dl>
@@ -133,7 +134,6 @@ try {
           <div><dt>My Role</dt><dd>${escapeHtml(copy.role)}</dd></div>
           <div><dt>Approach</dt><dd>${escapeHtml(copy.approach)}</dd></div>
           <div><dt>What it shows</dt><dd>${escapeHtml(copy.outcome)}</dd></div>
-          <div><dt>Selected visuals</dt><dd>${escapeHtml(copy.visuals)}</dd></div>
         </dl>
       </div>
       <section class="project-skills project-skills--photography" aria-label="Skills demonstrated">
