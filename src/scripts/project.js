@@ -52,7 +52,7 @@ try {
         </dl>
       </header>
       ${showCoverImage ? `<figure class="project-cover">
-        <img src="${escapeHtml(coverImage)}" alt="Cover image for ${escapeHtml(project.project_title)}" loading="eager">
+        <img src="${escapeHtml(coverImage)}" alt="Cover image for ${escapeHtml(project.project_title)}" loading="eager" decoding="async" fetchpriority="high"${project.cover_width ? ` width="${project.cover_width}"` : ""}${project.cover_height ? ` height="${project.cover_height}"` : ""}>
       </figure>` : ""}
       <div class="page-shell case-study">
         ${sections.map((section, index) => `
