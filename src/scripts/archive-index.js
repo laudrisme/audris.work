@@ -1,6 +1,10 @@
 import { workFilters, workEntryHref, workIndex } from "../data/work-index.js?v=20260628-multitag-filters";
 import { escapeHtml } from "./shared.js";
 
+const archivePreviewEntries = new Map(workIndex.map(entry => [entry.id, entry]));
+const preloadedArchiveImages = new Set();
+const archivePreviewImageCache = [];
+
 function matchesFilter(entry, filter) {
   if (filter === "All") return true;
   const filterTags = entry.filterTags || [entry.category];
@@ -30,6 +34,40 @@ function rowMarkup(entry) {
     <span class="archive-cell" data-label="Subcategory">${escapeHtml(entry.subcategory)}</span>
     <span class="archive-cell archive-cell--year" data-label="Year">${escapeHtml(entry.year)}</span>
   </a>`;
+}
+
+function scheduleArchiveIdle(task) {
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(task, { timeout: 1200 });
+    return;
+  }
+  window.setTimeout(() => task(), 180);
+}
+
+function warmArchiveImage(src) {
+  if (!src || preloadedArchiveImages.has(src)) return;
+  const image = new Image();
+  image.decoding = "async";
+  image.src = src;
+  preloadedArchiveImages.add(src);
+  archivePreviewImageCache.push(image);
+}
+
+function preloadArchivePreviewImages(entries) {
+  const queue = [...new Set(entries.map(entry => entry.image).filter(Boolean))];
+  let nextIndex = 0;
+
+  function step(deadline) {
+    while (nextIndex < queue.length) {
+      warmArchiveImage(queue[nextIndex]);
+      nextIndex += 1;
+      if (!deadline || typeof deadline.timeRemaining !== "function" || deadline.timeRemaining() < 5) break;
+    }
+
+    if (nextIndex < queue.length) scheduleArchiveIdle(step);
+  }
+
+  if (queue.length) scheduleArchiveIdle(step);
 }
 
 export function initArchiveIndex(root, options = {}) {
@@ -76,21 +114,46 @@ export function initArchiveIndex(root, options = {}) {
   const previewImage = root.querySelector("[data-archive-preview-image]");
   const previewTitle = root.querySelector("[data-archive-preview-title]");
   const previewType = root.querySelector("[data-archive-preview-type]");
+  let activePreviewId = "";
+
+  function markActiveRow(entryId) {
+    rows.querySelectorAll(".archive-row").forEach(row => {
+      const isActive = row.dataset.entryId === entryId;
+      row.toggleAttribute("data-preview-active", isActive);
+    });
+  }
 
   function setPreview(entry) {
     if (!previewImage || !entry?.image) return;
+    markActiveRow(entry.id);
+    if (activePreviewId === entry.id && previewImage.getAttribute("src") === entry.image) return;
     previewImage.src = entry.image;
     previewImage.alt = `Preview of ${entry.title}`;
     previewTitle.textContent = entry.title;
     previewType.textContent = `${entry.category} · ${entry.year}`;
+    activePreviewId = entry.id;
   }
 
-  function bindPreview() {
-    root.querySelectorAll(".archive-row").forEach(row => {
-      const entry = workIndex.find(item => item.id === row.dataset.entryId);
-      row.addEventListener("mouseenter", () => setPreview(entry));
-      row.addEventListener("focus", () => setPreview(entry));
-    });
+  function previewEntryFromTarget(target) {
+    if (!(target instanceof Element)) return null;
+    const row = target.closest(".archive-row");
+    if (!row) return null;
+    return archivePreviewEntries.get(row.dataset.entryId) || null;
+  }
+
+  if (rows && previewImage) {
+    const syncPreviewFromEvent = event => {
+      const entry = previewEntryFromTarget(event.target);
+      if (entry) setPreview(entry);
+    };
+
+    rows.addEventListener("pointerover", syncPreviewFromEvent);
+    rows.addEventListener("mouseover", syncPreviewFromEvent);
+    rows.addEventListener("focusin", syncPreviewFromEvent);
+    rows.addEventListener("pointerdown", syncPreviewFromEvent);
+    rows.addEventListener("click", syncPreviewFromEvent);
+
+    preloadArchivePreviewImages(workIndex);
   }
 
   function render() {
@@ -99,7 +162,6 @@ export function initArchiveIndex(root, options = {}) {
     count.textContent = `${visible.length} of ${workIndex.length}`;
     empty.hidden = visible.length > 0;
     rows.hidden = visible.length === 0;
-    bindPreview();
     if (visible[0]) setPreview(visible[0]);
   }
 

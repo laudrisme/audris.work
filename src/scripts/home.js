@@ -1,4 +1,4 @@
-import { initArchiveIndex } from "./archive-index.js?v=20260628-multitag-filters";
+import { initArchiveIndex } from "./archive-index.js?v=20260701-archive-preview-refresh";
 
 initArchiveIndex(document.querySelector("[data-home-archive]"), {
   title: "audris-portfolio-index.xls"
