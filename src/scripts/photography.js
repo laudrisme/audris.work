@@ -13,7 +13,7 @@ const photographyPageHref = "work/photography-visual-storytelling/index.html";
 function imageMarkup(image, section, index, lead = false, className = "", variant = "") {
   const rhythm = variant || (lead ? "lead" : ["tile-a", "tile-b", "tile-wide", "tile-small"][index % 4]);
   const classes = ["photo", `photo--${rhythm}`, className].filter(Boolean).join(" ");
-  const isPriorityImage = lead && section.layout === "opening";
+  const isPriorityImage = false;
   return `<figure class="${classes}">
     <img src="${image.src}" alt="${escapeHtml(image.alt)}" width="${image.width}" height="${image.height}" loading="${isPriorityImage ? "eager" : "lazy"}" decoding="async"${isPriorityImage ? ' fetchpriority="high"' : ""}>
     ${image.caption ? `<figcaption class="visually-hidden">${escapeHtml(image.caption)}</figcaption>` : ""}
@@ -118,8 +118,9 @@ try {
   sectionIndex.innerHTML = photographySections.map((section, index) => {
     const sectionImages = getPhotographyImages(section);
     const first = sectionImages.find(image => image.file === section.previewImage) || sectionImages[0];
+    const previewSrc = section.indexThumbnail || first.src;
     return `<a href="${photographyPageHref}#${section.anchor}" class="photography-index-card">
-      <img src="${first.src}" alt="Preview of ${escapeHtml(section.title)}" width="${first.width}" height="${first.height}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async"${index === 0 ? ' fetchpriority="high"' : ""}>
+      <img src="${previewSrc}" alt="Preview of ${escapeHtml(section.title)}" width="${first.width}" height="${first.height}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async"${index === 0 ? ' fetchpriority="high"' : ""}>
       <span><i>${String(index + 1).padStart(2, "0")}</i>${escapeHtml(section.title)}</span>
     </a>`;
   }).join("");

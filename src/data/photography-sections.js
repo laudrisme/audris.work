@@ -7,6 +7,7 @@ export const photographySections = [
     displayTitle: true,
     layout: "opening",
     previewImage: "04.jpg",
+    indexThumbnail: "assets/projects/photography/section-preview-thumbnails/01-opening/04.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
     dimensions: [[4399, 6598], [4374, 5468], [2107, 2809], [1739, 3091]]
   },
@@ -16,6 +17,7 @@ export const photographySections = [
     title: "Fashion Styling",
     displayTitle: true,
     layout: "asymmetric",
+    indexThumbnail: "assets/projects/photography/section-preview-thumbnails/02-Fashion-Styling/01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpeg", "04.jpg", "05.jpeg", "06.jpg", "07.jpg"],
     dimensions: [[4031, 5375], [1072, 2860], [1080, 1050], [4399, 6598], [3240, 1920], [1910, 2547], [2048, 2731]]
   },
@@ -26,6 +28,7 @@ export const photographySections = [
     displayTitle: true,
     layout: "asymmetric",
     assetVersion: "20260629-objects-layout-reference",
+    indexThumbnail: "assets/projects/photography/section-preview-thumbnails/03-objects-and-texture/01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpeg", "07.jpeg", "08.jpg", "09.jpg"],
     dimensions: [[4384, 5845], [3890, 5187], [4472, 3354], [3536, 4714], [3354, 4472], [3710, 4948], [4183, 5577], [4362, 5816], [5205, 3904]]
   },
@@ -35,6 +38,7 @@ export const photographySections = [
     title: "Place and Atmosphere",
     displayTitle: true,
     layout: "essay",
+    indexThumbnail: "assets/projects/photography/section-preview-thumbnails/04-place-and-atmosphere/01.jpg",
     images: [
       "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpeg",
       "06.jpeg", "07.jpg", "08.jpeg", "09.jpg"
@@ -49,6 +53,7 @@ export const photographySections = [
     displayTitle: true,
     layout: "closing",
     assetVersion: "20260628-closing",
+    indexThumbnail: "assets/projects/photography/section-preview-thumbnails/05-closing/01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg"],
     dimensions: [[2117, 3764], [2117, 3764], [1738, 3090], [1739, 3091]]
   }

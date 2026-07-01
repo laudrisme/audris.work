@@ -5,6 +5,10 @@ const archivePreviewEntries = new Map(workIndex.map(entry => [entry.id, entry]))
 const preloadedArchiveImages = new Set();
 const archivePreviewImageCache = [];
 
+function getArchivePreviewImage(entry) {
+  return entry?.previewImage || entry?.image || "";
+}
+
 function matchesFilter(entry, filter) {
   if (filter === "All") return true;
   const filterTags = entry.filterTags || [entry.category];
@@ -28,7 +32,7 @@ function matchesSearch(entry, query) {
 }
 
 function rowMarkup(entry) {
-  return `<a class="archive-row" href="${workEntryHref(entry)}" data-entry-id="${entry.id}" data-image="${escapeHtml(entry.image || "")}">
+  return `<a class="archive-row" href="${workEntryHref(entry)}" data-entry-id="${entry.id}" data-image="${escapeHtml(getArchivePreviewImage(entry))}">
     <span class="archive-cell archive-cell--work"><i aria-hidden="true"></i>${escapeHtml(entry.title)}</span>
     <span class="archive-cell" data-label="Category">${escapeHtml(entry.category)}</span>
     <span class="archive-cell" data-label="Subcategory">${escapeHtml(entry.subcategory)}</span>
@@ -54,7 +58,7 @@ function warmArchiveImage(src) {
 }
 
 function preloadArchivePreviewImages(entries) {
-  const queue = [...new Set(entries.map(entry => entry.image).filter(Boolean))];
+  const queue = [...new Set(entries.map(entry => getArchivePreviewImage(entry)).filter(Boolean))];
   let nextIndex = 0;
 
   function step(deadline) {
@@ -99,7 +103,7 @@ export function initArchiveIndex(root, options = {}) {
           <div class="archive-body" data-archive-rows></div>
         </div>
         ${options.preview ? `<aside class="archive-preview" aria-live="polite" data-archive-preview>
-          <img src="${workIndex[0].image}" alt="" decoding="async" data-archive-preview-image>
+          <img src="${getArchivePreviewImage(workIndex[0])}" alt="" decoding="async" data-archive-preview-image>
           <div><span data-archive-preview-type>${workIndex[0].category}</span><p data-archive-preview-title>${workIndex[0].title}</p></div>
         </aside>` : ""}
       </div>
@@ -124,10 +128,11 @@ export function initArchiveIndex(root, options = {}) {
   }
 
   function setPreview(entry) {
-    if (!previewImage || !entry?.image) return;
+    const previewSrc = getArchivePreviewImage(entry);
+    if (!previewImage || !previewSrc) return;
     markActiveRow(entry.id);
-    if (activePreviewId === entry.id && previewImage.getAttribute("src") === entry.image) return;
-    previewImage.src = entry.image;
+    if (activePreviewId === entry.id && previewImage.getAttribute("src") === previewSrc) return;
+    previewImage.src = previewSrc;
     previewImage.alt = `Preview of ${entry.title}`;
     previewTitle.textContent = entry.title;
     previewType.textContent = `${entry.category} · ${entry.year}`;

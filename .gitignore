@@ -43,6 +43,8 @@ content/source/
 assets/projects/photography/*
 !assets/projects/photography/curated-sections/
 !assets/projects/photography/curated-sections/**
+!assets/projects/photography/section-preview-thumbnails/
+!assets/projects/photography/section-preview-thumbnails/**
 assets/projects/photography/curated-sections/04-place-and-atmosphere/10.jpeg
 
 # Cyta source groupings are duplicated by the clean, web-named gallery files
