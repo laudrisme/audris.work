@@ -61,7 +61,7 @@ export function initArchiveIndex(root, options = {}) {
           <div class="archive-body" data-archive-rows></div>
         </div>
         ${options.preview ? `<aside class="archive-preview" aria-live="polite" data-archive-preview>
-          <img src="${workIndex[0].image}" alt="" data-archive-preview-image>
+          <img src="${workIndex[0].image}" alt="" decoding="async" data-archive-preview-image>
           <div><span data-archive-preview-type>${workIndex[0].category}</span><p data-archive-preview-title>${workIndex[0].title}</p></div>
         </aside>` : ""}
       </div>

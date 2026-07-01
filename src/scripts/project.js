@@ -181,6 +181,7 @@ function renderVisualGroups(groups, projectSlug) {
             src="${escapeHtml(visual.src)}"
             alt="${escapeHtml(visual.alt)}"
             loading="${visualIndex === 0 && groupIndex === 0 ? "eager" : "lazy"}"
+            decoding="async"
             ${visual.transparent ? 'data-transparent="true"' : ""}
           >
           ${projectSlug !== "marketing-retail-projects" && visual.caption ? `<figcaption>${escapeHtml(visual.caption)}</figcaption>` : ""}
