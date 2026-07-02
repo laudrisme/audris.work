@@ -173,6 +173,7 @@ function buildVisualGroups(sections, visuals, configuredGroups) {
 }
 
 function renderVisualGroups(groups, projectSlug) {
+  const shouldPrioritiseFirstVisual = !showCoverImage;
   return groups.map((group, groupIndex) => `
     <div class="case-study__visuals case-study__visuals--${escapeHtml(group.layout || "editorial-left")}" data-visual-group="${groupIndex + 1}">
       ${group.visuals.map((visual, visualIndex) => `
@@ -180,7 +181,7 @@ function renderVisualGroups(groups, projectSlug) {
           <img
             src="${escapeHtml(visual.src)}"
             alt="${escapeHtml(visual.alt)}"
-            loading="${visualIndex === 0 && groupIndex === 0 ? "eager" : "lazy"}"
+            loading="${shouldPrioritiseFirstVisual && visualIndex === 0 && groupIndex === 0 ? "eager" : "lazy"}"
             decoding="async"
             ${visual.transparent ? 'data-transparent="true"' : ""}
           >
