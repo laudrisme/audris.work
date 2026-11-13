@@ -1,16 +1,16 @@
 export const projectVisuals = {
   "cyta-sustainable-incense-brand": {
     selectedVisuals: [
-      { src: "assets/projects/cyta/selected-visuals/01-cyta-product-cold-grey.jpg", alt: "Black Cyta incense tube with a red tassel photographed on a cool grey surface", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/02-cyta-lace-logo.png", alt: "Transparent lace-inspired Cyta identity with stars, wings and the kite character", caption: "", transparent: true },
-      { src: "assets/projects/cyta/selected-visuals/03-cyta-packaging-editorial.png", alt: "Cyta incense packaging presented within a pale lace-patterned editorial composition", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/04-cyta-studio-workshop.jpeg", alt: "Incense tubes and a ceramic burner arranged in the Cyta studio", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/05-incense-tube-sample.jpeg", alt: "Close view of a black Cyta incense tube and red tassel on a wooden surface", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/01-cyta-product-cold-grey.jpg", alt: "Black incense tube with a red tassel photographed on a cool grey surface", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/02-cyta-lace-logo.png", alt: "Early Cyta lace-inspired logo with stars, wings and the kite character", caption: "", transparent: true },
+      { src: "assets/projects/cyta/selected-visuals/03-cyta-packaging-editorial.png", alt: "Early Cyta packaging design in a pale lace-patterned editorial composition", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/04-cyta-studio-workshop.jpeg", alt: "Incense tubes and a ceramic burner arranged in a studio setting", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/05-incense-tube-sample.jpeg", alt: "Close view of a black incense tube and red tassel on a wooden surface", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/06-cyta-incense-materials-01.JPG", alt: "Jar of jasmine buds shown with a traditional Chinese materia medica reference", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/07-cyta-incense-materials-02.jpeg", alt: "Hand selecting labelled incense materials during formulation research", caption: "" },
       { src: "assets/projects/cyta/selected-visuals/08-cyta-incense materials-03.JPG", alt: "Dried citrus ingredients arranged in a ceramic vessel for incense formulation", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/09-cyta-sourcing-visit.jpg", alt: "Material and product research during a Cyta sourcing visit", caption: "" },
-      { src: "assets/projects/cyta/selected-visuals/10-cyta-retail-visit.jpg", alt: "Retail space under construction during the build-out stage", caption: "" }
+      { src: "assets/projects/cyta/selected-visuals/09-cyta-sourcing-visit.jpg", alt: "Material and product research during an incense sourcing visit", caption: "" },
+      { src: "assets/projects/cyta/selected-visuals/10-cyta-retail-visit.jpg", alt: "Unfinished retail interior", caption: "" }
     ],
     visualGroups: [
       { sectionIndex: 0, layout: "cyta-overview", visualIndexes: [0] },

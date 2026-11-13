@@ -1,60 +1,56 @@
 export const projectCopy = {
   "cyta-sustainable-incense-brand": {
-    overview: "Cyta is a sustainable incense brand I founded to bring traditional Chinese incense culture into a more contemporary, design-led context.",
-    context: "The project translates incense-making into a more approachable, trustworthy, and relevant product experience while preserving the depth of its rituals and material logic.",
+    overview: "I started this independent project to bring traditional Chinese incense into a contemporary design context.",
+    context: "The project explores how packaging, imagery and clear information can make traditional incense rituals more approachable.",
     role: "Founder and brand lead",
-    approach: "Cyta was developed around four core ideas: cultural heritage, mental well-being, sustainability, and community.",
-    outcome: "Cyta evolved from a personal idea into a customer-facing lifestyle brand with a clear identity and a small but meaningful community around it.",
+    approach: "I developed the core product and packaging, shaped the brand positioning, coordinated supplier sourcing and created product photography and customer-facing visual content.",
+    outcome: "The project has a developed core product and packaging, with refill and channel ideas for further exploration.",
     visuals: "",
     sections: [
       {
         heading: "Overview",
         body: [
-          "Cyta is a sustainable incense brand I founded to bring traditional Chinese incense culture into a more contemporary, design-led context. Inspired by the character 鳶 (kite), the brand explores calm, ritual, and emotional care through product, packaging, and atmosphere.",
-          "The project emerged from my family’s background in Traditional Chinese Medicine, my interest in mindful living, and my own experience of stress and sleep difficulties as a student. Through Cyta, I wanted to explore how product design, storytelling, and customer experience could make an ancient practice feel relevant, approachable, and emotionally resonant for a new generation."
+          "I started this independent project to bring traditional Chinese incense into a contemporary design context. It grew from my family’s background in traditional Chinese medicine and my interest in the place of scent and ritual in everyday life.",
+          "I developed the core incense product and its packaging, and used photography and visual storytelling to explore how the materials, craft and atmosphere could be communicated to someone new to incense."
         ]
       },
       {
         heading: "Brand Identity and Visual Language",
         alignment: "right",
         body: [
-          "The visual identity was designed to convey a sense of calm before the product is even used. The lace logo became central to Cyta’s language, chosen for its balance of intimacy and distance — delicate and close to the body, yet light, airy, and almost disappearing. Its softness and intricate making process reflect the brand’s values: slow, quiet, private, and resistant to the pace of modern visual culture.",
-          "In a world shaped by efficiency and constant consumption, that softness felt quietly luxurious. The lace texture also captured the experience I wanted Cyta to create: breathable, tactile, intimate, and gently suspended."
+          "Cyta was an earlier working name for the project. The logo and packaging shown here document that phase of the brand’s development. Inspired by the character 鳶 (kite), I explored a lace motif that felt delicate and close to the body, with enough lightness to seem almost suspended.",
+          "The lace texture and soft light became part of the way I photographed the product. These studies helped me shape a visual direction around calm, tactility and the intimacy of a daily ritual."
         ]
       },
       {
         heading: "The Challenge",
         body: [
-          "While incense has long held significance in Chinese culture for its aromatic, medicinal, and spiritual roles, many modern products either flatten it into fragrance alone, overlooking the material and cultural logic that defines traditional incense-making, or present it in ways that feel inaccessible to younger users. Choosing incense can be challenging without clear guidance. Subtle differences in material quality, proportion, and pairing can create distinctly different sensory experiences and intended effects.",
-          "At the same time, the category faces a clear quality divide: affordable options often rely on lower-grade materials, while higher-end incense can be inconsistent or difficult to source.",
-          "This project responds to that gap by translating incense-making into a more approachable, trustworthy, and relevant product experience. Rather than framing incense as a generic wellness trend, Cyta aims to preserve the depth of its rituals and material logic while making it easier to understand and use in everyday life."
+          "Incense has long played aromatic, spiritual and ceremonial roles in Chinese culture. For someone unfamiliar with the practice, it can be difficult to tell how ingredients, their proportions and the way they are combined affect the scent and the experience of using it.",
+          "My design challenge was to make the materials and ritual easier to understand while keeping the cultural references and craft visible in the product, packaging and imagery."
         ]
       },
       {
         heading: "My Approach",
         body: [
-          "Cyta was developed around four core ideas: cultural heritage, mental well-being, sustainability, and community. Drawing on my family’s knowledge of Traditional Chinese Medicine, I explored how incense recipes and medicinal ingredients shape scent, atmosphere, and emotional experience, reframing incense as a ritual grounded in material, memory, and care.",
-          "With my family’s support, I sourced more reliable herbs and materials, allowing me to prioritise quality, formulation, and trust in the product development process. I developed three everyday blends — cleansing, calming, and resting — and created the brand identity, packaging, photography, and digital communication to present Cyta as a quiet, contemporary, culturally grounded brand.",
-          "Sustainability was built into both the product and the customer journey. Cyta uses carefully sourced ingredients, recyclable packaging, refillable containers, and refill vouchers to encourage keeping, reusing, and returning rather than quick disposal."
+          "I drew on family knowledge of traditional Chinese incense and coordinated supplier sourcing as I developed the core product and its packaging. I used the material choices and the experience of using incense to guide the brand positioning.",
+          "I photographed the product and packaging and created customer-facing visual content to convey the texture, light and atmosphere of the ritual.",
+          "I also explored recyclable packaging and a refillable vessel as design concepts. A refill voucher was proposed as a way to encourage customers to keep and reuse the vessel."
         ]
       },
       {
         heading: "Retail and Community Channels",
         contentLayout: "split",
         body: [
-          "Rather than relying on paid advertising, Cyta grew through curated physical spaces and word of mouth. I introduced the brand through Pilates studios, yoga studios, meditation spaces, therapy consult rooms, and other wellness-oriented spaces — environments where customers encountered the incense naturally before engaging with the product.",
-          "The brand also developed through private Instagram and WeChat communities, extending the relationship beyond the first purchase and creating space to share knowledge about incense, well-being, and traditional culture. Cyta later expanded into workshops and Traditional Chinese six-element consultations, offering a more personalised way to explore scent, material, and lifestyle fit.",
+          "I considered how people might first encounter the incense in spaces where ritual already has a place, including Pilates, yoga and meditation studios, therapy consultation rooms and wellness clinics.",
+          "Instagram and WeChat were considered as places to share the craft and cultural background. Workshops and personalised consultations remain ideas to explore.",
           {
-            listTitle: "Channels",
+            listTitle: "Potential channels",
             items: [
-              "Direct-to-customer sales",
-              "Private Instagram community",
-              "WeChat members community",
-              "Pilates and yoga studios",
-              "Meditation spaces",
-              "Therapy consultation rooms",
-              "Facial and wellness clinics",
-              "Word-of-mouth referrals"
+              "Direct-to-customer retail",
+              "Instagram and WeChat",
+              "Pilates, yoga and meditation studios",
+              "Therapy consultation rooms and wellness clinics",
+              "Word of mouth"
             ]
           }
         ]
@@ -63,9 +59,8 @@ export const projectCopy = {
         heading: "What It Led To",
         alignment: "left",
         body: [
-          "Cyta evolved from a personal idea into a customer-facing lifestyle brand with a clear identity and a small but meaningful community around it.",
-          "Building the brand gave me hands-on experience across the full product lifecycle: identifying opportunities, developing the product, shaping the visual identity, testing communications, creating content, building retail relationships, and responding to customer feedback.",
-          "It also taught me that branding is not only visual. Every touchpoint — scent, packaging, photography, workshops, conversations, social media, and the refill system — contributes to how people experience and understand a brand."
+          "I developed the core incense product and its packaging, established the brand positioning, coordinated supplier sourcing and created product photography and customer-facing visual content.",
+          "Working across scent, packaging and photography helped me see how each can communicate the same sense of care. The refill voucher and ideas for retail and community engagement give me directions to explore as the brand develops."
         ]
       },
       {
@@ -74,15 +69,14 @@ export const projectCopy = {
           items: [
             "Brand positioning and storytelling",
             "Product and packaging development",
-            "Customer communication and community building",
-            "Retail partnership development",
-            "Visual content and art direction",
-            "E-commerce and digital engagement"
+            "Supplier sourcing coordination",
+            "Product photography and art direction",
+            "Customer-facing visual content"
           ]
         }
       }
     ],
-    skills: ["Brand positioning and storytelling", "Product and packaging development", "Customer communication and community building", "Retail partnership development", "Visual content and art direction", "E-commerce and digital engagement"]
+    skills: ["Brand positioning and storytelling", "Product and packaging development", "Supplier sourcing coordination", "Product photography and art direction", "Customer-facing visual content"]
   },
   "cross-border-ecommerce-operations": {
     overview: "This work gave me hands-on experience supporting fashion and lifestyle products across international markets, spanning customer communication, supplier coordination, listings, logistics and sales support.",

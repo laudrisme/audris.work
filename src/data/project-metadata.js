@@ -1,11 +1,11 @@
 export const projectMetadata = [
   {
-    project_title: "Cyta / Sustainable Incense Brand",
+    project_title: "Independent Incense Brand Development",
     project_slug: "cyta-sustainable-incense-brand",
     year: "2023-present",
     role: "Founder and brand lead",
-    category: "Sustainable brand building / product / e-commerce",
-    one_line_summary: "Reimagining traditional incense culture through thoughtful design, honest storytelling and a more contemporary customer experience.",
+    category: "Brand development / product / packaging",
+    one_line_summary: "Developing an independent incense brand rooted in traditional Chinese incense culture, through product, packaging and visual storytelling.",
     cover_image: "assets/projects/previews/main/cyta-cover-packaging-01.png",
     cover_width: 1448,
     cover_height: 1086

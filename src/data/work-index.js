@@ -1,10 +1,10 @@
 export const workIndex = [
   {
     id: "cyta-sustainable-incense-brand",
-    title: "Cyta / Sustainable Incense Brand",
+    title: "Independent Incense Brand Development",
     type: "project",
     category: "Brand",
-    subcategory: "Sustainable Ritual Goods",
+    subcategory: "Incense / Product Development",
     year: "2023–2026",
     route: "project.html?slug=cyta-sustainable-incense-brand",
     anchor: "",
